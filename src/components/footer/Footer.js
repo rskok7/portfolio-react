@@ -3,9 +3,9 @@ import './Footer.css';
 
 function Footer () {
     return (
-        <footer class="footer">
-            <p class="footer__text">Designed and built by Colin Maretsky</p>
-            <p class="footer__text">The Year of Our Lord, 2021</p>
+        <footer className="footer">
+            <p className="footer__text">Designed and built by Colin Maretsky</p>
+            <p className="footer__text">The Year of Our Lord, 2021</p>
         </footer>
     )
 }
