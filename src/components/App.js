@@ -11,20 +11,20 @@ import Footer from './footer/Footer.js';
 
 function App() {
   return (
-    <div className="beep">
+    <div className="page">
       <Route>
         <Header />
       </Route>
-      <Route>
+      <Route name="lead">
         <Lead />
       </Route>
-      <Route>
+      <Route name="about">
         <About />
       </Route>
-      <Route>
+      <Route name="projects">
         <Projects />
       </Route>
-      <Route>
+      <Route name="about">
         <Contact />
       </Route>
       <Route>

@@ -17,26 +17,7 @@
 }
 
 .header_scroll {
-    opacity: 0.5;
     background-color: #7cd5df;
-    animation: fadeIn .6s ease 1 forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-.header_grey {
-    background-color:rgba(255, 255, 255);
-    animation: fadeOut .8s ease 1 forwards;
-}
-
-@keyframes fadeOut {
-    to {
-        background-color: transparent;
-    }
 }
 
 .header__menu-btn {

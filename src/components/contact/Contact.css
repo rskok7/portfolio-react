@@ -14,7 +14,7 @@
 
 .contact__subtitle {
     font-size: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 65px;
 }
 
 .contact__button {
@@ -25,11 +25,11 @@
     height: 50px;
     line-height: 50px;
     width: 350px;
-    font-size: 20px;
+    font-size: 32px;
     background-color: transparent;
     border: 3px solid #7cd5df;
     border-radius: 65px;
-    padding: 10px 15px;
+    padding: 10px 55px;
     color: #7cd5df;
     font-weight: 400;
     transition: 0.4s ease;

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Lead.css';
 import Anime from '../../images/colin-anime-reduced.png';
+import CurvedBottom from '../../images/curved-bottom.png';
 
 function Lead() {
     return (
@@ -13,7 +14,7 @@ function Lead() {
                 </div>
             </section>
 
-            <img className="curved-bottom" src="./images/curved-bottom.png" alt="" />
+            <img className="curved-bottom" src={CurvedBottom} alt="" />
         </>
     )
 }
