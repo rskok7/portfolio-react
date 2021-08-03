@@ -30,7 +30,7 @@ function Header() {
             <label className="header__menu-icon" htmlFor="header__menu-btn"><span className="navicon"></span></label>
             <ul className="menu">
                 <li className="header__list"><Link className="header__link" activeClass="active" to="lead" smooth={true}>Home</Link></li>
-                <li className="header__list"><Link className="header__link" activeClass="active" to="about" smooth={true} offset={-50}>About</Link></li>
+                <li className="header__list"><Link className="header__link" activeClass="active" to="about" smooth={true}>About</Link></li>
                 <li className="header__list"><Link className="header__link" activeClass="active" to="projects" smooth={true} offset={30}>Portfolio</Link></li>
                 <li className="header__list"><Link className="header__link" activeClass="active" to="contact" smooth={true}>Contact</Link></li>
             </ul>
