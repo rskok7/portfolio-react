@@ -1,14 +1,22 @@
 import React from 'react';
 import './About.css';
+import GearIcon from '../../images/portfolio-icons/gear-icon.png';
+import ArtIcon from '../../images/portfolio-icons/art-icon.png';
+import CometIcon from '../../images/portfolio-icons/comet-icon.png';
+import ColinImage from '../../images/no-sunglasses-pilot.JPG';
+import BlackCatIcon from '../../images/link-icons/cat-icon-black.png';
+import BusinessIcon from '../../images/link-icons/business-icon.png';
+import BasketballIcon from '../../images/link-icons/basketball-icon.png';
+
 
 function About () {
     return (
         <section className="about">
 
             <div className="about__icons">
-                <img className="icon" src="./images/portfolio-icons/gear-icon.png" alt=""/>
-                <img className="icon" src="./images/portfolio-icons/art-icon.png" alt="" />
-                <img className="icon" src="./images/portfolio-icons/comet-icon.png" alt="" />
+                <img className="icon" src={GearIcon} alt=""/>
+                <img className="icon" src={ArtIcon} alt="" />
+                <img className="icon" src={CometIcon} alt="" />
             </div>
 
             <div className="about-navigator" id="about"></div>
@@ -20,7 +28,7 @@ function About () {
 
                 <article className="about__info">
                     <div className="about__intro">
-                        <img className="about__image" src="./images/no-sunglasses-pilot.JPG" alt="" />
+                        <img className="about__image" src={ColinImage} alt="" />
                     </div>
                     <div className="about__me">
                         <p className="about__paragraph">I'm a traveler and freelance web developer with a passion for
@@ -38,11 +46,11 @@ function About () {
                             channel</a>, and wakeboarding. Check me out at the places below:</p>
                         <div className="about__icons">
                             <a className="icon-link" href="https://github.com/cjmaret" target="_blank" rel="noreferrer" ><img
-                                className="places-icon" src="./images/link-icons/cat-icon-black.png" alt="" /></a>
+                                className="places-icon" src={BlackCatIcon} alt="" /></a>
                             <a className="icon-link" href="https://www.linkedin.com/in/colin-maretsky/" target="_blank" rel="noreferrer" ><img
-                                className="places-icon" src="./images/link-icons/business-icon.png" alt="" /></a>
+                                className="places-icon" src={BusinessIcon} alt="" /></a>
                             <a className="icon-link" href="https://dribbble.com/cjmaret" target="_blank" rel="noreferrer" ><img
-                                className="places-icon" src="./images/link-icons/basketball-icon.png" alt="" /></a>
+                                className="places-icon" src={BasketballIcon} alt="" /></a>
                         </div>
 
                     </div>

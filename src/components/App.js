@@ -11,7 +11,7 @@ import Footer from './footer/Footer.js';
 
 function App() {
   return (
-    <div className="page">
+    <div className="beep">
       <Route>
         <Header />
       </Route>
