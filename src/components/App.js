@@ -23,7 +23,7 @@ function App() {
       <div className={`loading-screen ${loading ? '' : 'loading-screen_inactive'}`}>
         <img src={LoadingScreen} className='loading-screen__logo' alt="" />
       </div>
-      <div className="page">
+      <div className={`page ${!loading ? '' : 'page_inactive'}`}>
         <Route>
           <Header />
         </Route>
