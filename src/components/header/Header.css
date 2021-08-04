@@ -64,6 +64,9 @@
 
 .logo-link {
     margin: auto 0;
+}
+
+.logo-link:hover {
     cursor: pointer;
 }
 
