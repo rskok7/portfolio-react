@@ -1,6 +1,7 @@
 import React from 'react';
 import './Projects.css';
 import ProjectCard from '../project-card/ProjectCard';
+import PlanetsReactImage from '../../images/planets-react-images/planets-react-mainImage.png';
 import InstagramHomepageImage from '../../images/web_project_4-images/instagram-homepage.png';
 import PortlandPortfolioImage from '../../images/web_project_3-images/portland-portfolio.png';
 import JavascriptProjectImage from '../../images/javascript-projects-images/javascript-homepage.png';
@@ -18,9 +19,15 @@ function Projects() {
             <div className="projects__text-group" id="portfolio">
                 <h2 className="projects__title">My Recent Projects</h2>
                 <p className="projects__subtitle">I’m never finished learning new things. The projects below show
-                    what I can do for you, your business, or your new project. Take a look:</p>
+                    what I can do for you, your business, or your future ventures. Take a look:</p>
             </div>
             <article className="projects__grid">
+                <ProjectCard
+                    mainImage={PlanetsReactImage}
+                    cardParagraph={"This aesthetic planets fact-site uses a Single Page App built by React, displaying its content in an optimized fashion"}
+                    pageLink={"https://cjmaret.github.io/planets-fact-site-react/"}
+                    githubLink={"https://github.com/cjmaret/planets-fact-site-react"}
+                />
                 <ProjectCard
                     mainImage={InstagramHomepageImage}
                     cardParagraph={"An Instagram-style webpage which showcases Javascript form validation and image-card adding via templates"}
@@ -47,12 +54,9 @@ function Projects() {
                 />
                 <ProjectCard
                     mainImage={MinimalistPortfolioImage}
-                    cardParagraph={"A minimalist portfolio, showcasing a sleek and functional layout, and emphasizing a 'less is more' design philosophy."}
+                    cardParagraph={"A minimalist portfolio, showcasing a sleek and functional layout, and emphasizing a 'less is more' design philosophy"}
                     pageLink={"https://cjmaret.github.io/minimalist_portfolio_website/"}
                     githubLink={"https://github.com/cjmaret/minimalist_portfolio_website"}
-                />
-                <ProjectCard 
-                    
                 />
             </article>
 

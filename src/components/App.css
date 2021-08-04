@@ -24,3 +24,10 @@
     opacity: 0;
     visibility: hidden;
 }
+
+@media (max-width: 510px) {
+    .loading-screen__logo {
+        max-width: 510px;
+        width: 100%;
+    }
+}

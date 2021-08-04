@@ -59,7 +59,7 @@ function About () {
                 <article className="about__lists">
 
                     <div className="list list_type_languages">
-                        <p className="list-interior__title">Languages I Speak</p>
+                        <p className="list-interior__title">I Speak</p>
                         <ul className="list-interior__list">
                             <li className="list-interior__list-item">HTML5</li>
                             <li className="list-interior__list-item">CSS</li>
@@ -69,8 +69,8 @@ function About () {
                         </ul>
                     </div>
 
-                    <div className="list list_type_languages">
-                        <p className="list-interior__title">Languages I'm Learning</p>
+                    <div className="list list_type_languages-learning">
+                        <p className="list-interior__title">I'm Learning</p>
                         <ul className="list-interior__list">
                             <li className="list-interior__list-item">Node.js</li>
                             <li className="list-interior__list-item">jQuery</li>
@@ -79,7 +79,7 @@ function About () {
                     </div>
 
                     <div className="list list_type_tools">
-                        <p className="list-interior__title list-interior__title_type_tools">Tools I Use</p>
+                        <p className="list-interior__title">I Use</p>
                         <ul className="list-interior__list">
                             <li className="list-interior__list-item list-interior__list-item_type_tools">Github</li>
                             <li className="list-interior__list-item list-interior__list-item_type_tools">Terminal</li>

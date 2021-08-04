@@ -9,7 +9,7 @@ import BlackCatIcon from '../../images/link-icons/cat-icon-black.png';
 function ProjectCard(props) {
     return (
         <div className="projects__card">
-            <img className="projects__image" src={props.mainImage} alt="" />
+            <a className="projects__image-link" href={props.pageLink} target="_blank" rel="noreferrer" ><img className="projects__image" src={props.mainImage} alt="" /></a>
             <div className="projects__overlay">
                 <div className="projects__text-container">
                     <p className="projects__text">{props.cardParagraph}</p>
