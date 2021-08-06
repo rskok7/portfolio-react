@@ -56,7 +56,7 @@
     object-fit: cover;
     margin-top: 9px;
     margin-bottom: 9px;
-    margin-left: 75px;
+    margin-left: 30px;
     transition: opacity 0.4s ease;
 }
 
@@ -76,16 +76,15 @@
     display: block;
 }
 
-@media (max-width: 666px) {
+@media (max-width: 768px) {
     .logo {
-        margin-left: 25px;
+        margin-left: 15px;
     }
 
     .menu {
         margin-right: 25px;
     }
 }
-
 
 
 @media (max-width: 510px) {
@@ -97,7 +96,11 @@
         top: 0px;
         height: auto;
     }
-          
+       
+    .logo {
+        margin-left: 5px;
+    }
+
     .menu {
         margin-right: 20px;
         display: block;
@@ -119,7 +122,7 @@
 
     .header__link {
         display: block;
-        margin: 40px 60px 40px 30px;
+        margin: 25px 60px 25px 30px;
         text-decoration: none;
         text-align: left;
         transition: color 0.4s ease;
@@ -130,14 +133,6 @@
     .header__list {
         margin-right: 0;
      }
-
-     .logo_place_header {
-        display: block;
-        float: left;
-        font-size: 2em;
-        padding: 10px 20px;
-        text-decoration: none;
-    }
       
       /* menu icon */
       

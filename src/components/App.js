@@ -12,7 +12,7 @@ import LoadingScreen from '../images/logos/loading-logo.png';
 
 function App() {
 
-  const [loading, setLoading] = React.useState(true);
+  const [loading, setLoading] = React.useState(false);
 
   React.useEffect(() => {
     setTimeout(() => setLoading(false), 2000);
