@@ -51,10 +51,12 @@
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
     object-fit: cover;
-    margin: 15px 0 15px 75px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    margin-left: 75px;
     transition: opacity 0.4s ease;
 }
 
@@ -95,28 +97,51 @@
         top: 0px;
         height: auto;
     }
-
-    .menu {
-        display: block;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        overflow: hidden;
-        background-color: rgba(35, 35, 35, 0.5);
-    }
           
-    .header .menu {
-        clear: both;
-        max-height: 0;
+    .menu {
+        margin-right: 20px;
+        display: block;
+        max-height: 0px;
         transition: max-height .5s ease;
         position: absolute;
         top: 84px;
         right: 0;
+        overflow: hidden;
+        background-color: white;
+        border-radius: 7px;
+        box-shadow: 1px 1px 15px rgba(167, 167, 167, 0.3), -1px 1px 15px rgba(167, 167, 167, 0.3);
+    }
+
+    .menu-active {
+        transition: 1s;
+        max-height: 300px;
+    }
+
+    .header__link {
+        display: block;
+        margin: 40px 60px 40px 30px;
+        text-decoration: none;
+        text-align: left;
+        transition: color 0.4s ease;
+        color: #7cd5df;
+
+    }
+
+    .header__list {
+        margin-right: 0;
+     }
+
+     .logo_place_header {
+        display: block;
+        float: left;
+        font-size: 2em;
+        padding: 10px 20px;
+        text-decoration: none;
     }
       
       /* menu icon */
       
-    .header .header__menu-icon {
+    .header__menu-icon {
         cursor: pointer;
         display: inline-block;
         /* float: right; */
@@ -126,7 +151,7 @@
         align-self: center;
     }
       
-    .header .header__menu-icon .navicon {
+    .navicon {
         background: white;
         display: block;
         height: 3px;
@@ -135,8 +160,8 @@
         width: 25px;
     }
       
-    .header .header__menu-icon .navicon:before,
-    .header .header__menu-icon .navicon:after {
+    .navicon:before,
+    .navicon:after {
         background: white;
         content: '';
         display: block;
@@ -146,70 +171,36 @@
         width: 100%;
     }
       
-    .header .header__menu-icon .navicon:before {
+    .navicon:before {
         top: 7px;
     }
       
-    .header .header__menu-icon .navicon:after {
+    .navicon:after {
         top: -7px;
     }
       
       /* menu btn */
-      
-    .header .header__menu-btn {
-        display: none;
-    }
-      
-    .header .header__menu-btn:checked ~ .menu {
-        max-height: 240px;
-    }
-      
-    .header .header__menu-btn:checked ~ .header__menu-icon .navicon {
+        
+    .header__menu-btn:checked ~ .header__menu-icon .navicon {
         background: transparent;
     }
       
-    .header .header__menu-btn:checked ~ .header__menu-icon .navicon:before {
+    .header__menu-btn:checked ~ .header__menu-icon .navicon:before {
         transform: rotate(-45deg);
     }
       
-    .header .header__menu-btn:checked ~ .header__menu-icon .navicon:after {
+    .header__menu-btn:checked ~ .header__menu-icon .navicon:after {
         transform: rotate(45deg);
     }
       
-    .header .header__menu-btn:checked ~ .header__menu-icon:not(.steps) .navicon:before,
-    .header .header__menu-btn:checked ~ .header__menu-icon:not(.steps) .navicon:after {
+    .header__menu-btn:checked ~ .header__menu-icon:not(.steps) .navicon:before,
+    .header__menu-btn:checked ~ .header__menu-icon:not(.steps) .navicon:after {
         top: 0;
     }
 
-    .header .header__link:focus + .menu {
-        max-height: 0;
-    }
-
-    .header__link {
-        display: block;
-        margin: 20px 20px;
-        text-decoration: none;
-        text-align: center;
-        color: white;
-        transition: color 0.4s ease;
-    }
-
-    .header__list {
-        margin-right: 0;
-     }
-
     .header__link:hover,
-    .header .header__menu-btn:hover {
-        color: rgba(255, 255, 255, 0.5);
-    }
-    
-    .logo_place_header {
-        display: block;
-        float: left;
-        font-size: 2em;
-        padding: 10px 20px;
-        text-decoration: none;
-    }
-    
+    .header__menu-btn:hover {
+        color: rgba(124, 213, 223, 0.5);
+    }    
 
 }

@@ -7,7 +7,7 @@ import About from './about/About.js';
 import Projects from './projects/Projects.js';
 import Contact from './contact/Contact.js';
 import Footer from './footer/Footer.js';
-import LoadingScreen from '../images/new-logo.png';
+import LoadingScreen from '../images/logos/loading-logo.png';
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       <div className={`loading-screen ${loading ? '' : 'loading-screen_inactive'}`}>
         <img src={LoadingScreen} className='loading-screen__logo' alt="" />
       </div>
-      <div className="page">
+      <div className={`page ${!loading ? '' : 'page_inactive'}`}>
         <Route>
           <Header />
         </Route>
