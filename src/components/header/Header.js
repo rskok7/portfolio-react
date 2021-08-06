@@ -7,8 +7,7 @@ function Header() {
     const [yOffset, setYOffset] = React.useState(window.pageYOffset);
     const [scrolled, setScrolled] = React.useState(false);
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-    const [mobileWidth, setMobileWidth] = React.useState(false);
-;
+
     React.useEffect(() => {
         function changePageYOffset() {
             setYOffset(window.pageYOffset);
