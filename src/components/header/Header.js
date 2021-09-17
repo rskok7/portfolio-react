@@ -34,8 +34,8 @@ function Header() {
             <label className="header__menu-icon" htmlFor="header__menu-btn"><span className="navicon"></span></label>
             <ul className={`menu ${isMenuOpen ? 'menu-active' : 'menu-inactive'}`}>
                 <li className="header__list"><Link className="header__link" activeClass="active" to="lead" smooth={true} onClick={onNavClick}>Home</Link></li>
-                <li className="header__list"><Link className="header__link" activeClass="active" to="about" smooth={true} onClick={onNavClick}>About</Link></li>
-                <li className="header__list"><Link className="header__link" activeClass="active" to="projects" smooth={true} offset={30} onClick={onNavClick}>Portfolio</Link></li>
+                <li className="header__list"><Link className="header__link" activeClass="active" to="about" smooth={true} onClick={onNavClick} offset={-70} >About</Link></li>
+                <li className="header__list"><Link className="header__link" activeClass="active" to="projects" smooth={true} offset={30} onClick={onNavClick} offset={80} >Portfolio</Link></li>
                 <li className="header__list"><Link className="header__link" activeClass="active" to="contact" smooth={true} onClick={onNavClick}>Contact</Link></li>
             </ul>
         </header>

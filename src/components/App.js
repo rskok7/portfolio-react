@@ -1,17 +1,16 @@
-import React from 'react';
-import './App.css';
-import { Route } from 'react-router-dom';
-import Header from './header/Header.js';
-import Lead from './lead/Lead.js';
-import About from './about/About.js';
-import Projects from './projects/Projects.js';
-import Contact from './contact/Contact.js';
-import Footer from './footer/Footer.js';
-import LoadingScreen from '../images/logos/loading-logo.png';
-
+import React from "react";
+import "./App.css";
+import { Route } from "react-router-dom";
+import Header from "./header/Header.js";
+import Lead from "./lead/Lead.js";
+import About from "./about/About.js";
+import Projects from "./projects/Projects.js";
+import Contact from "./contact/Contact.js";
+import Footer from "./footer/Footer.js";
+import LoadingScreen from "../images/logos/loading-logo.png";
+import projectCards from "../arrays/project-cards";
 
 function App() {
-
   const [loading, setLoading] = React.useState(false);
 
   React.useEffect(() => {
@@ -20,10 +19,12 @@ function App() {
 
   return (
     <>
-      <div className={`loading-screen ${loading ? '' : 'loading-screen_inactive'}`}>
-        <img src={LoadingScreen} className='loading-screen__logo' alt="" />
+      <div
+        className={`loading-screen ${loading ? "" : "loading-screen_inactive"}`}
+      >
+        <img src={LoadingScreen} className="loading-screen__logo" alt="" />
       </div>
-      <div className={`page ${!loading ? '' : 'page_inactive'}`}>
+      <div className={`page ${!loading ? "" : "page_inactive"}`}>
         <Route>
           <Header />
         </Route>
@@ -34,7 +35,7 @@ function App() {
           <About />
         </Route>
         <Route name="projects">
-          <Projects />
+          <Projects data={projectCards} />
         </Route>
         <Route name="about">
           <Contact />
