@@ -85,7 +85,6 @@ function Header() {
             activeClass="active"
             to="projects"
             smooth={true}
-            offset={30}
             onClick={onNavClick}
             offset={80}
           >
