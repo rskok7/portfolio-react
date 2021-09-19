@@ -8,7 +8,7 @@ import ApiaryHomepageImage from "../images/apiary-images/apiary-homepage.png";
 
 const projectCards = [
   {
-    id: 1,
+    id: 7,
     image: ApiaryHomepageImage,
     alt: "Apiary Homepage",
     description:
@@ -17,7 +17,7 @@ const projectCards = [
     githubLink: "https://github.com/cjmaret/apiary",
   },
   {
-    id: 2,
+    id: 6,
     image: PlanetsReactImage,
     alt: "Planets Infographic page",
     description:
@@ -26,7 +26,7 @@ const projectCards = [
     githubLink: "https://github.com/cjmaret/planets-fact-site-react",
   },
   {
-    id: 3,
+    id: 5,
     image: InstagramHomepageImage,
     alt: "Instagram-style homepage",
     description:
@@ -44,7 +44,7 @@ const projectCards = [
     githubLink: "https://github.com/cjmaret/web_project_3",
   },
   {
-    id: 5,
+    id: 3,
     image: JavascriptProjectImage,
     alt: "javascript exercises page",
     description:
@@ -53,7 +53,7 @@ const projectCards = [
     githubLink: "https://github.com/cjmaret/Javascript-30-Days",
   },
   {
-    id: 5,
+    id: 2,
     image: ProjectOneHomepageImage,
     alt: "learning app homepage",
     description:
@@ -62,7 +62,7 @@ const projectCards = [
     githubLink: "https://github.com/cjmaret/web_project_1",
   },
   {
-    id: 5,
+    id: 1,
     image: MinimalistPortfolioImage,
     alt: "minimalist portfolio landing page",
     description:
