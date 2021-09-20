@@ -12,7 +12,7 @@ const projectCards = [
     image: ApiaryHomepageImage,
     alt: "Apiary Homepage",
     description:
-      "A no-cost website development service. This project uses React and Contentful to allow the client to update relevant site content without having to interact with any code",
+      "Ths project uses React and Contentful to allow the client to update relevant site content without having to interact with any code",
     pageLink: "https://apiary-project.netlify.app/#/",
     githubLink: "https://github.com/cjmaret/apiary",
   },
