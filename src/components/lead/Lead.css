@@ -9,6 +9,11 @@
     align-items: center;
 }
 
+.lead__anime {
+    max-width: 250px;
+    width: 100%;
+}
+
 .lead__title {
     font-size: 75px;
     margin-top: 20px;
@@ -71,9 +76,4 @@
     .lead__subtitle {
         font-size: 15px;
     }
-}
-
-.lead__anime {
-    /* border: 1px solid red; */
-    max-width: 250px;
 }

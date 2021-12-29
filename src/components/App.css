@@ -2,37 +2,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
 .page {
-    font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 .page_inactive {
-    display: none;
+  display: none;
 }
 
 .loading-screen {
-    background-color: white;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: all 0.7s ease;
-    overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: all 0.7s ease;
+  overflow: hidden;
 }
 
 .loading-screen_inactive {
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dracula-button {
+  position: fixed;
+  color: white;
+  top: 200px;
+  left: 25px;
+  padding: 10px 10px;
+  border: 3px solid black;
+  border-radius: 25px;
+  z-index: 3;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.dracula-button_type_off {
+  background-color: grey;
+}
+
+.dracula-button_type_on {
+  background-color: purple;
+}
+
+.dracula-button:hover {
+  cursor: pointer;
+  transform: scale(1.15);
 }
 
 @media (max-width: 510px) {
-    .loading-screen__logo {
-        max-width: 510px;
-        width: 100%;
-    }
+  .loading-screen__logo {
+    max-width: 510px;
+    width: 100%;
+  }
 }
