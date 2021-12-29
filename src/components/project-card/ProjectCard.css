@@ -6,7 +6,7 @@
     align-self: center;
     position: relative;
     transition: transform 0.4s ease;
-    height: auto;
+    height: 100%;
 }
 
 .projects__card:hover {

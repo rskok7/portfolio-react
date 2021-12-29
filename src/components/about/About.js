@@ -22,9 +22,9 @@ function About () {
             <div className="about-navigator" id="about"></div>
 
             <div className="about__exterior">
-                <h2 className="about__title">Front-End Web Developer.</h2>
-                <h2 className="about__title">Web Designer.</h2>
-                <h2 className="about__title">Sex Symbol.</h2>
+                <h2 className="about__title">Full-Stack Developer.</h2>
+                <h2 className="about__title">Digital Designer.</h2>
+                <h2 className="about__title">Website Chef.</h2>
 
                 <article className="about__info">
                     <div className="about__intro">

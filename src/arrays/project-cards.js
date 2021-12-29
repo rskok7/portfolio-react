@@ -1,12 +1,21 @@
-import MinimalistPortfolioImage from "../images/minimalist-portfolio-images/minimalist-portfolio.png";
-import ProjectOneHomepageImage from "../images/web_project_1-images/homepage.png";
-import JavascriptProjectImage from "../images/javascript-projects-images/javascript-homepage.png";
-import PortlandPortfolioImage from "../images/web_project_3-images/portland-portfolio.png";
-import InstagramHomepageImage from "../images/web_project_4-images/instagram-homepage.png";
-import PlanetsReactImage from "../images/planets-react-images/planets-react-mainImage.png";
-import ApiaryHomepageImage from "../images/apiary-images/apiary-homepage.png";
+import MinimalistPortfolioImage from '../images/minimalist-portfolio-images/minimalist-portfolio.png';
+import ProjectOneHomepageImage from '../images/web_project_1-images/homepage.png';
+import JavascriptProjectImage from '../images/javascript-projects-images/javascript-homepage.png';
+import PortlandPortfolioImage from '../images/web_project_3-images/portland-portfolio.png';
+import InstagramHomepageImage from '../images/web_project_4-images/instagram-homepage.png';
+import PlanetsReactImage from '../images/planets-react-images/planets-react-mainImage.png';
+import ApiaryHomepageImage from '../images/apiary-images/apiary-homepage.png';
+import NewsExplorerHomepageImage from '../images/news-explorer-images/news-explorer-homepage.png'
 
 const projectCards = [
+  {
+    id: 8,
+    image: NewsExplorerHomepageImage,
+    alt: 'News Explorer',
+    description: 'A news article website which lets users search for real-world news pieces, and save them for later reading',
+    pageLink: 'https://news-explorer-site.netlify.app/',
+    githubLink: 'https://github.com/cjmaret/news-explorer-frontend',
+  },
   {
     id: 7,
     image: ApiaryHomepageImage,

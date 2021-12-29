@@ -83,6 +83,10 @@
     transition: opacity 0.4s ease;
 }
 
+.about__animation-link:hover {
+    opacity: 0.6;
+}
+
 .icon-link {
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
