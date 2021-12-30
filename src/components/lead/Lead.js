@@ -1,15 +1,14 @@
 import React from 'react';
-import './Lead.css';
 import Anime from '../../images/colin-anime-reduced.png';
 import AnimeRegular from '../../images/colin-anime.png';
 import AnimeDracula from '../../images/colin-anime-dracula.png';
-import CurvedBottom from '../../images/curved-bottom.png';
-import { LeadSection, LeadContainer, LeadImage, LeadTitle, LeadSubtitle } from './styledLead';
+import CurvedBottomImage from '../../images/curved-bottom.png';
+import { LeadSection, LeadContainer, LeadImage, LeadTitle, LeadSubtitle, CurvedBottom } from './styledLead';
 
 function Lead({ draculaMode }) {
   return (
     <>
-      <LeadSection>
+      <LeadSection id="lead">
         <LeadContainer>
           <LeadImage
             src={draculaMode ? AnimeDracula : AnimeRegular}
@@ -20,7 +19,7 @@ function Lead({ draculaMode }) {
         </LeadContainer>
       </LeadSection>
 
-      <img className='curved-bottom' src={CurvedBottom} alt='' />
+      <CurvedBottom src={CurvedBottomImage} alt='' />
     </>
   );
 }

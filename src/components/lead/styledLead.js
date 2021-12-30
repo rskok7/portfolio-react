@@ -70,3 +70,9 @@ export const LeadSubtitle = styled.p`
     font-size: 15px;
   }
 `;
+
+export const CurvedBottom = styled.img`
+  margin-top: -10px;
+  object-fit: fill;
+  width: 100vw;
+`;
