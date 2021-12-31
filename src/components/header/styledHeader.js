@@ -158,6 +158,7 @@ export const HeaderLink = styled(Link)`
   color: white;
   font-size: 20px;
   transition: opacity 0.4s ease;
+  user-select: none;
 
   &:hover {
     opacity: 0.7;

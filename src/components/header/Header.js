@@ -115,7 +115,7 @@ function Header() {
             to='about'
             smooth={true}
             onClick={onNavClick}
-            offset={mobileWidth ? -70 : 0}
+            offset={mobileWidth ? -70 : -25}
             draculaMode={draculaMode}>
             About
           </HeaderLink>
@@ -126,7 +126,7 @@ function Header() {
             to='projects'
             smooth={true}
             onClick={onNavClick}
-            offset={80}
+            offset={40}
             draculaMode={draculaMode}>
             Portfolio
           </HeaderLink>

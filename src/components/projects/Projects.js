@@ -13,8 +13,8 @@ function Projects({ data }) {
   const draculaMode = useContext(DraculaContext
     );
   return (
-    <ProjectsSection>
-      <ProjectsTextGroup id='portfolio' draculaMode={draculaMode}>
+    <ProjectsSection id='projects'>
+      <ProjectsTextGroup draculaMode={draculaMode}>
         <ProjectsTitle>My Recent Projects</ProjectsTitle>
         <ProjectsSubtitle>
           I’m never finished learning new things. The projects below show what I can do for you,
