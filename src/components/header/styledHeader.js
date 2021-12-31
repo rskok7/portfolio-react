@@ -8,7 +8,15 @@ export const HeaderSection = styled.header`
   top: 0;
   z-index: 9998;
   width: 100vw;
-  background-color: ${(props) => (props.$scrolled ? '#7cd5df' : '')};
+  background-color: ${(props) => {
+    if (props.scrolled && props.draculaMode) {
+      return '#892738';
+    } else if (props.scrolled) {
+      return '#7cd5df';
+    } else {
+      return '';
+    }
+  }};
 
   @media (max-width: 510px) {
     margin: 0;
@@ -124,16 +132,14 @@ export const Menu = styled.ul`
     top: 84px;
     right: 0;
     overflow: hidden;
-    background-color: white;
+    background-color: ${(props) => (props.draculaMode ? '#A0A9BA' : 'white')};
     border-radius: 7px;
-    box-shadow: 1px 1px 15px rgba(167, 167, 167, 0.3), -1px 1px 15px rgba(167, 167, 167, 0.3);
+    box-shadow: ${(props) =>
+      props.draculaMode
+        ? '1px 1px 15px rgba(86, 97, 118, 0.3), -1px 1px 15px rgba(86, 97, 118, 0.3)'
+        : '1px 1px 15px rgba(167, 167, 167, 0.3), -1px 1px 15px rgba(167, 167, 167, 0.3)'};
   }
 `;
-
-/* .menu-active {
-        transition: 1s;
-        max-height: 300px;
-    } */
 
 export const HeaderList = styled.li`
   margin-right: 20px;
@@ -151,10 +157,10 @@ export const HeaderLink = styled(Link)`
   text-decoration: none;
   color: white;
   font-size: 20px;
-  transition: color 0.4s ease;
+  transition: opacity 0.4s ease;
 
   &:hover {
-    color: rgba(255, 255, 255, 0.5);
+    opacity: 0.7;
     cursor: pointer;
   }
 
@@ -163,12 +169,6 @@ export const HeaderLink = styled(Link)`
     margin: 25px 60px 25px 30px;
     text-decoration: none;
     text-align: left;
-    transition: color 0.4s ease;
-    color: #7cd5df;
-
-    &:hover {
-      color: rgba(124, 213, 223, 0.5);
-      cursor: pointer;
-    }
+    color: ${(props) => (props.draculaMode ? '#892738' : '#7cd5df')};
   }
 `;

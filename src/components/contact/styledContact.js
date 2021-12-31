@@ -63,10 +63,10 @@ export const ContactButton = styled.a`
   width: 350px;
   font-size: 32px;
   background-color: transparent;
-  border: 3px solid #7cd5df;
+  border: 3px solid ${(props) => (props.draculaMode ? '#892738' : '#7cd5df')};
   border-radius: 65px;
   padding: 10px 55px;
-  color: #7cd5df;
+  color: ${(props) => (props.draculaMode ? '#892738' : '#7cd5df')};
   font-weight: 400;
   transition: 0.4s ease;
   text-decoration: none;
@@ -74,7 +74,7 @@ export const ContactButton = styled.a`
   &:hover {
     color: white;
     /* background-color: #3ac0cf; */
-    background-color: #7cd5df;
+    background: ${(props) => (props.draculaMode ? '#892738' : '#7cd5df')};
     cursor: pointer;
   }
 

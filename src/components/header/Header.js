@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link } from 'react-scroll';
+import React, { useEffect, useState, createRef, useContext } from 'react';
 import {
   HeaderSection,
   LogoLink,
@@ -12,19 +11,24 @@ import {
   HeaderLink,
 } from './styledHeader';
 import LogoImage from '../../images/logos/cm-logo_white.png';
+import { DraculaContext } from '../app/App';
 
 function Header() {
-  const [yOffset, setYOffset] = React.useState(window.pageYOffset);
-  const [scrolled, setScrolled] = React.useState(false);
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [mobileWidth, setMobileWidth] = React.useState(false);
+  const [yOffset, setYOffset] = useState(window.pageYOffset);
+  const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mobileWidth, setMobileWidth] = useState(false);
+  const draculaMode = useContext(DraculaContext);
+  // const menuRef = createRef();
+  // const naviconRef = createRef();
 
-  React.useEffect(() => {
+  // sets background color based on page scroll
+  useEffect(() => {
     function changePageYOffset() {
       setYOffset(window.pageYOffset);
     }
     window.addEventListener('scroll', changePageYOffset);
-    if (yOffset >= window.innerHeight * 0.7) {
+    if (yOffset >= window.innerHeight * 0.8) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -32,7 +36,8 @@ function Header() {
     return () => window.removeEventListener('scroll', changePageYOffset);
   }, [yOffset]);
 
-  React.useEffect(() => {
+  // measures pageWidth for mobile menu
+  useEffect(() => {
     function checkWidth() {
       const windowWidth = window.matchMedia('(max-width: 769px)');
       if (windowWidth.matches) {
@@ -46,12 +51,40 @@ function Header() {
     return () => window.removeEventListener('resize', checkWidth);
   });
 
+  // toggles mobile menu open
   function onNavClick() {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  // close menu with ESC key
+  useEffect(() => {
+    function keyPress(e) {
+      if (e.key === 'Escape') {
+        setIsMenuOpen(false);
+      }
+    }
+    window.addEventListener('keydown', keyPress);
+    return () => window.removeEventListener('keydown', keyPress);
+  });
+
+  // useEffect(() => {
+  //   function checkIfClickedOutside(e) {
+  //     console.log(e.target)
+  //     if (menuRef.current && !menuRef.current.contains(e.target)) {
+  //       setIsMenuOpen(false);
+  //       console.log(menuRef)
+  //     }
+  //   }
+
+  //   window.addEventListener('mousedown', checkIfClickedOutside);
+
+  //   return () => window.removeEventListener('mousedown', checkIfClickedOutside);
+  // }, [isMenuOpen]);
+
+  console.log(isMenuOpen);
+
   return (
-    <HeaderSection $scrolled={scrolled}>
+    <HeaderSection scrolled={scrolled} draculaMode={draculaMode}>
       <LogoLink to='lead' smooth={true}>
         <Logo src={LogoImage} alt='' />
       </LogoLink>
@@ -65,9 +98,14 @@ function Header() {
       <HeaderMenuIcon htmlFor='header__menu-btn'>
         <Navicon isMenuOpen={isMenuOpen}></Navicon>
       </HeaderMenuIcon>
-      <Menu isMenuOpen={isMenuOpen}>
+      <Menu isMenuOpen={isMenuOpen} draculaMode={draculaMode}>
         <HeaderList>
-          <HeaderLink activeClass='active' to='lead' smooth={true} onClick={onNavClick}>
+          <HeaderLink
+            activeClass='active'
+            to='lead'
+            smooth={true}
+            onClick={onNavClick}
+            draculaMode={draculaMode}>
             Home
           </HeaderLink>
         </HeaderList>
@@ -77,7 +115,8 @@ function Header() {
             to='about'
             smooth={true}
             onClick={onNavClick}
-            offset={mobileWidth ? -70 : 0}>
+            offset={mobileWidth ? -70 : 0}
+            draculaMode={draculaMode}>
             About
           </HeaderLink>
         </HeaderList>
@@ -87,12 +126,18 @@ function Header() {
             to='projects'
             smooth={true}
             onClick={onNavClick}
-            offset={80}>
+            offset={80}
+            draculaMode={draculaMode}>
             Portfolio
           </HeaderLink>
         </HeaderList>
         <HeaderList>
-          <HeaderLink activeClass='active' to='contact' smooth={true} onClick={onNavClick}>
+          <HeaderLink
+            activeClass='active'
+            to='contact'
+            smooth={true}
+            onClick={onNavClick}
+            draculaMode={draculaMode}>
             Contact
           </HeaderLink>
         </HeaderList>

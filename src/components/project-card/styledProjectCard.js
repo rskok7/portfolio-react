@@ -18,7 +18,8 @@ export const ProjectCardContainer = styled.div`
     max-height: 700px;
     display: flex;
     flex-direction: column;
-    background-color: rgba(233, 240, 243, 0.7);
+    background-color: ${(props) =>
+      props.draculaMode ? 'rgba(124, 130, 142, 0.7)' : 'rgba(233, 240, 243, 0.7)'};
     padding: 20px 0;
     border-radius: 25px;
 
@@ -39,8 +40,10 @@ export const ProjectImage = styled.img`
   width: 100%;
   object-fit: cover;
   border-radius: 25px;
-  box-shadow: 0px 10px 1px rgba(233, 240, 243, 0.7);
-
+  box-shadow: ${(props) =>
+    props.draculaMode
+      ? '0px 10px 0px rgba(124, 130, 142, 0.7)'
+      : '0px 10px 1px rgba(233, 240, 243, 0.7)'};
   @media (max-width: 510px) {
     width: 90%;
     margin: auto;

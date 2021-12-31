@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   AboutSection,
   AboutIcons,
@@ -25,18 +25,23 @@ import {
 import GearIcon from '../../images/portfolio-icons/gear-icon.png';
 import ArtIcon from '../../images/portfolio-icons/art-icon.png';
 import CometIcon from '../../images/portfolio-icons/comet-icon.png';
+import GearIconDracula from '../../images/portfolio-icons/gear-icon-dracula.png';
+import ArtIconDracula from '../../images/portfolio-icons/art-icon-dracula.png';
+import CometIconDracula from '../../images/portfolio-icons/comet-icon-dracula.png';
 import ColinImage from '../../images/no-sunglasses-pilot.JPG';
 import BlackCatIcon from '../../images/link-icons/cat-icon-black.png';
 import BusinessIcon from '../../images/link-icons/business-icon.png';
 import BasketballIcon from '../../images/link-icons/basketball-icon.png';
+import { DraculaContext } from '../app/App';
 
 function About() {
+  const draculaMode = useContext(DraculaContext);
   return (
     <AboutSection>
       <AboutIcons>
-        <AboutIcon src={GearIcon} alt='' />
-        <AboutIcon src={ArtIcon} alt='' />
-        <AboutIcon src={CometIcon} alt='' />
+        <AboutIcon src={draculaMode ? GearIconDracula : GearIcon} alt='' />
+        <AboutIcon src={draculaMode ? ArtIconDracula : ArtIcon} alt='' />
+        <AboutIcon src={draculaMode ? CometIconDracula : CometIcon} alt='' />
       </AboutIcons>
 
       <AboutNavigator id='about'></AboutNavigator>
@@ -62,7 +67,8 @@ function About() {
               <AboutAnimationLink
                 href='https://www.youtube.com/channel/UCmvmSKDd3Wo7CQt8carRVuA'
                 target='_blank'
-                rel='noreferrer'>
+                rel='noreferrer'
+                draculaMode={draculaMode}>
                 animated history channel
               </AboutAnimationLink>
               , and wakeboarding. Check me out at the places below:
@@ -84,7 +90,7 @@ function About() {
           </AboutMe>
         </AboutInfo>
 
-        <AboutLists>
+        <AboutLists draculaMode={draculaMode}>
           <ListTypeLanguages>
             <ListInteriorTitle>I Speak</ListInteriorTitle>
             <ListInteriorList>

@@ -1,25 +1,32 @@
-import React from 'react';
-import Anime from '../../images/colin-anime-reduced.png';
-import AnimeRegular from '../../images/colin-anime.png';
-import AnimeDracula from '../../images/colin-anime-dracula.png';
+import React, { useContext } from 'react';
+import { DraculaContext } from '../app/App';
+import Anime from '../../images/colin-anime-profile/colin-anime-reduced.png';
+import AnimeRegular from '../../images/colin-anime-profile/colin-anime.png';
+import AnimeDracula from '../../images/colin-anime-profile/colin-anime-dracula.png';
 import CurvedBottomImage from '../../images/curved-bottom.png';
-import { LeadSection, LeadContainer, LeadImage, LeadTitle, LeadSubtitle, CurvedBottom } from './styledLead';
+import {
+  LeadSection,
+  LeadContainer,
+  LeadImage,
+  LeadTitle,
+  LeadSubtitle,
+  CurvedBottom,
+} from './styledLead';
 
-function Lead({ draculaMode }) {
+function Lead() {
+  const draculaMode = useContext(DraculaContext);
+
   return (
     <>
-      <LeadSection id="lead">
+      <LeadSection id='lead' draculaMode={draculaMode}>
         <LeadContainer>
-          <LeadImage
-            src={draculaMode ? AnimeDracula : AnimeRegular}
-            alt=''
-          />
+          <LeadImage src={draculaMode ? AnimeDracula : AnimeRegular} alt='' />
           <LeadTitle className='lead__title'>Hi, I'm Colin.</LeadTitle>
           <LeadSubtitle className='lead__subtitle'>I like bringing ideas to life.</LeadSubtitle>
         </LeadContainer>
       </LeadSection>
 
-      <CurvedBottom src={CurvedBottomImage} alt='' />
+      <CurvedBottom src={CurvedBottomImage} alt='' draculaMode={draculaMode} />
     </>
   );
 }

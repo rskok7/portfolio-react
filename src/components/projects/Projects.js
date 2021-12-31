@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   ProjectsSection,
   ProjectsTextGroup,
@@ -7,11 +7,14 @@ import {
   ProjectsGrid,
 } from './styledProjects';
 import ProjectCard from '../project-card/ProjectCard';
+import { DraculaContext } from '../app/App';
 
 function Projects({ data }) {
+  const draculaMode = useContext(DraculaContext
+    );
   return (
     <ProjectsSection>
-      <ProjectsTextGroup id='portfolio'>
+      <ProjectsTextGroup id='portfolio' draculaMode={draculaMode}>
         <ProjectsTitle>My Recent Projects</ProjectsTitle>
         <ProjectsSubtitle>
           I’m never finished learning new things. The projects below show what I can do for you,

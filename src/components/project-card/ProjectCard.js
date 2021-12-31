@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DraculaContext } from '../app/App';
 import {
   ProjectCardContainer,
   ProjectImageLink,
@@ -17,6 +18,7 @@ import BlackCatIcon from '../../images/link-icons/cat-icon-black.png';
 
 function ProjectCard(props) {
   const [mobileWidth, setMobileWidth] = React.useState(false);
+  const draculaMode = useContext(DraculaContext)
 
   React.useEffect(() => {
     function checkWidth() {
@@ -33,9 +35,9 @@ function ProjectCard(props) {
   });
 
   return (
-    <ProjectCardContainer>
+    <ProjectCardContainer draculaMode={draculaMode}>
       <ProjectImageLink href={props.pageLink} target='_blank' rel='noreferrer'>
-        <ProjectImage className='projects__image' src={props.mainImage} alt={props.alt} />
+        <ProjectImage src={props.mainImage} alt={props.alt} draculaMode={draculaMode} />
       </ProjectImageLink>
       <ProjectOverlay>
         <ProjectTextContainer>

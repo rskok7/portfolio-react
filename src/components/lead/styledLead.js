@@ -1,11 +1,12 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const LeadSection = styled.section`
   height: 85vh;
   width: 100vw;
   margin-top: -112px;
   z-index: 3;
-  background-color: #7cd5df;
+  background: ${(props) =>
+    props.draculaMode ? 'linear-gradient(45deg, #804c79, #46338E)' : '#7cd5df'};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,6 +18,11 @@ export const LeadSection = styled.section`
   @media (max-width: 320px) {
     height: 75vh;
   }
+`;
+
+const backgroundTransition = keyframes`  
+0% {background: linear-gradient(45deg, #804c79, #46338E); }
+100% { background: #7cd5df;};
 `;
 
 export const LeadContainer = styled.div`
@@ -75,4 +81,5 @@ export const CurvedBottom = styled.img`
   margin-top: -10px;
   object-fit: fill;
   width: 100vw;
+  visibility: ${(props) => (props.draculaMode ? 'hidden' : 'visible')};
 `;

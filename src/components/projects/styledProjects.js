@@ -14,7 +14,7 @@ export const ProjectsTextGroup = styled.div`
   width: 100%;
   margin: 0 auto 50px auto;
   position: relative;
-  background-color: #7cd5df;
+  background: ${(props) => (props.draculaMode ? '#892738' : '#7cd5df')};
 
   @media (max-width: 320px) {
     padding: 70px 0 225px 0;
