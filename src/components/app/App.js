@@ -22,7 +22,7 @@ export const DraculaContext = createContext();
 
 function App() {
   const [loading, setLoading] = React.useState(false);
-  const [draculaMode, setDraculaMode] = React.useState(true);
+  const [draculaMode, setDraculaMode] = React.useState(false);
   const [isDraculaHovered, setIsDraculaHovered] = React.useState(false);
 
   React.useEffect(() => {
@@ -38,7 +38,7 @@ function App() {
   }
 
   console.log(isDraculaHovered);
-  
+
   return (
     <>
       {/* <LoadingScreenComponent>
