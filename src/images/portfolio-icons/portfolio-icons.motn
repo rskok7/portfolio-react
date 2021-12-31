@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE ozxmlscene>
-<ozml version="5.11">
+<ozml version="5.13">
 
-<displayversion>5.5.1</displayversion>
+<displayversion>5.6</displayversion>
 
 <factory id="1" uuid="0e8d443513b611d89395000a95af9f7e">
 	<description>Channel</description>
@@ -133,7 +133,7 @@
 	<cameraType>0</cameraType>
 	<cameraName>Active Camera</cameraName>
 	<mirrorHMD>0</mirrorHMD>
-	<panZoom camera="0" zoom="0.66421003049652994" panX="28" panY="163" mode="1" centered="0"/>
+	<panZoom camera="0" zoom="0.66421003049652994" panX="129.35868781372398" panY="184.71982813088039" mode="1" centered="0"/>
 	<panZoom camera="1" zoom="1" panX="0" panY="0" mode="1" centered="1"/>
 </viewer>
 
@@ -171,7 +171,7 @@
 	<displayEffects>1</displayEffects>
 	<videoVerticalZoom>1</videoVerticalZoom>
 	<audioVerticalZoom>1.1111111640930176</audioVerticalZoom>
-	<displayRange in="-733938620 1589062500 3 0" out="10461868945 1000000000 3 0"/>
+	<displayRange in="-430 931 3 0" out="9740 931 3 0"/>
 </timeline>
 
 <curveeditor>
@@ -179,14 +179,15 @@
 	<snapping>0</snapping>
 	<displayAudioWaveform>0</displayAudioWaveform>
 	<lockKeyframesInTime>0</lockKeyframesInTime>
-	<displayRange in="-733938620 1589062500 3 0" out="10461868945 1000000000 3 0"/>
-	<currentviewvolume originx="-0.46186894473942969" originy="-62.5" width="10.92373789" height="125"/>
+	<displayRange in="-430 931 3 0" out="9740 931 3 0"/>
+	<currentviewvolume originx="-0.46186895810955964" originy="-62.5" width="10.923737916219119" height="125"/>
 	<snapshotChannels>0</snapshotChannels>
 </curveeditor>
 
 <inspector>
 	<collapseState id="./1/100" state="1"/>
 	<collapseState id="./1/200" state="1"/>
+	<collapseState id="./1/344" state="1"/>
 </inspector>
 
 <scene>
@@ -244,7 +245,8 @@
 		<version>2</version>
 	</publishSettings>
 	<currentFrame>0 1 1 0</currentFrame>
-	<activeLayer>3011872880</activeLayer>
+	<currentObject>3011872903</currentObject>
+	<activeLayer>3011872903</activeLayer>
 	<timeRange offset="0 1 1 0" duration="1536000 153600 1 0"/>
 	<playRange offset="0 1 1 0" duration="1536000 153600 1 0"/>
 	<flags>1</flags>
@@ -1407,7 +1409,7 @@
 		<flags>0</flags>
 		<timing in="0 1 1 0" out="1530880 153600 1 0" offset="0 1 1 0"/>
 		<foldFlags>1</foldFlags>
-		<baseFlags>524304</baseFlags>
+		<baseFlags>268959761</baseFlags>
 		<enabled>0</enabled>
 		<parameter name="Properties" id="1" flags="8589938704">
 			<parameter name="Transform" id="100" flags="8589938704">
@@ -2445,7 +2447,6 @@
 		<timing in="0 1 1 0" out="1530880 153600 1 0" offset="0 1 1 0"/>
 		<foldFlags>1</foldFlags>
 		<baseFlags>524304</baseFlags>
-		<enabled>0</enabled>
 		<parameter name="Properties" id="1" flags="8589938704">
 			<parameter name="Transform" id="100" flags="8589938704">
 				<parameter name="Position" id="101" flags="8589938704">
@@ -2908,6 +2909,7 @@
 		<timing in="0 1 1 0" out="1530880 153600 1 0" offset="0 1 1 0"/>
 		<foldFlags>1</foldFlags>
 		<baseFlags>524304</baseFlags>
+		<enabled>0</enabled>
 		<parameter name="Properties" id="1" flags="8589938704">
 			<parameter name="Transform" id="100" flags="8589938704">
 				<parameter name="Position" id="101" flags="8589938704">
@@ -2948,7 +2950,7 @@
 	<layer name="Group 3" id="3011872879">
 		<scenenode name="download" id="3011872871" factoryID="7" version="5">
 			<validTracks>1</validTracks>
-			<aspectRatio>0</aspectRatio>
+			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
 			<timing in="0 1 1 0" out="1530880 153600 1 0" offset="0 1 1 0"/>
 			<foldFlags>16384</foldFlags>
@@ -2975,6 +2977,13 @@
 						<parameter name="Y" id="2" flags="12884901904" default="0.5" value="0.5"/>
 					</parameter>
 				</parameter>
+				<parameter name="Cinematic" id="344" flags="8589938706">
+					<foldFlags>131076</foldFlags>
+					<parameter name="Depth of Field" id="346" flags="8589934608" default="1.3999999999999999" value="2"/>
+					<parameter name="Focus Point" id="348" flags="8589938706">
+						<foldFlags>15</foldFlags>
+					</parameter>
+				</parameter>
 				<parameter name="Lighting" id="230" flags="8589938706">
 					<foldFlags>15</foldFlags>
 				</parameter>
@@ -2999,7 +3008,7 @@
 		</scenenode>
 		<scenenode name="Screen Shot 2021-05-12 at 3.55.49 PM" id="3011872874" factoryID="7" version="5">
 			<validTracks>1</validTracks>
-			<aspectRatio>0</aspectRatio>
+			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
 			<timing in="0 1 1 0" out="1530880 153600 1 0" offset="0 1 1 0"/>
 			<foldFlags>16384</foldFlags>
@@ -3016,6 +3025,13 @@
 						<foldFlags>15</foldFlags>
 						<parameter name="X" id="1" flags="8589934608" default="1" value="7.7191614111097149"/>
 						<parameter name="Y" id="2" flags="8589934608" default="1" value="7.7191614111097149"/>
+					</parameter>
+				</parameter>
+				<parameter name="Cinematic" id="344" flags="8589938706">
+					<foldFlags>131076</foldFlags>
+					<parameter name="Depth of Field" id="346" flags="8589934608" default="1.3999999999999999" value="2"/>
+					<parameter name="Focus Point" id="348" flags="8589938706">
+						<foldFlags>15</foldFlags>
 					</parameter>
 				</parameter>
 				<parameter name="Lighting" id="230" flags="8589938706">
@@ -3042,7 +3058,7 @@
 		</scenenode>
 		<scenenode name="Screen Shot 2021-05-12 at 3.56.42 PM" id="3011872876" factoryID="7" version="5">
 			<validTracks>1</validTracks>
-			<aspectRatio>0</aspectRatio>
+			<aspectRatio>1</aspectRatio>
 			<flags>0</flags>
 			<timing in="0 1 1 0" out="1530880 153600 1 0" offset="0 1 1 0"/>
 			<foldFlags>16384</foldFlags>
@@ -3059,6 +3075,13 @@
 						<foldFlags>15</foldFlags>
 						<parameter name="X" id="1" flags="8589934608" default="1" value="5.7730170939417924"/>
 						<parameter name="Y" id="2" flags="8589934608" default="1" value="5.7730170939417924"/>
+					</parameter>
+				</parameter>
+				<parameter name="Cinematic" id="344" flags="8589938706">
+					<foldFlags>131076</foldFlags>
+					<parameter name="Depth of Field" id="346" flags="8589934608" default="1.3999999999999999" value="2"/>
+					<parameter name="Focus Point" id="348" flags="8589938706">
+						<foldFlags>15</foldFlags>
 					</parameter>
 				</parameter>
 				<parameter name="Lighting" id="230" flags="8589938706">
@@ -3110,6 +3133,116 @@
 		</parameter>
 	</layer>
 	<layer name="Group" id="3011872862">
+		<scenenode name="Circle copy" id="3011873029" factoryID="9" version="5">
+			<isShapeStyle>0</isShapeStyle>
+			<aspectRatio>1</aspectRatio>
+			<flags>0</flags>
+			<timing in="0 1 1 0" out="1530880 153600 1 0" offset="0 1 1 0"/>
+			<foldFlags>0</foldFlags>
+			<baseFlags>524304</baseFlags>
+			<enabled>0</enabled>
+			<parameter name="Properties" id="1" flags="8589938704">
+				<parameter name="Transform" id="100" flags="8589938704">
+					<parameter name="Position" id="101" flags="8589938704">
+						<foldFlags>15</foldFlags>
+						<parameter name="X" id="1" flags="8589934608" default="0" value="-39.879348754925452"/>
+						<parameter name="Y" id="2" flags="8589934608" default="0" value="-1.8597754802840427e-06"/>
+					</parameter>
+					<parameter name="Scale" id="105" flags="8589938704">
+						<foldFlags>15</foldFlags>
+						<parameter name="X" id="1" flags="8589934608" default="1" value="1.1440005169096423"/>
+						<parameter name="Y" id="2" flags="8589934608" default="1" value="1.1440005169096423"/>
+					</parameter>
+				</parameter>
+				<parameter name="Lighting" id="230" flags="8589938706">
+					<foldFlags>15</foldFlags>
+				</parameter>
+				<parameter name="Shadows" id="234" flags="8589938706">
+					<foldFlags>15</foldFlags>
+				</parameter>
+				<parameter name="Reflection" id="223" flags="8589971474">
+					<foldFlags>131087</foldFlags>
+				</parameter>
+			</parameter>
+			<parameter name="Object" id="2" flags="8589938704">
+				<parameter name="Shape" id="353" flags="8589938704">
+					<parameter name="Animation" id="117" flags="8589934610" default="0" value="0">
+						<curve_X/>
+						<curve_Y/>
+						<closed>0</closed>
+					</parameter>
+					<parameter name="Shape Type" id="100" flags="12884967442" default="4" value="4"/>
+					<parameter name="Closed" id="116" flags="8590000146" default="0" value="1"/>
+					<parameter name="Roundness" id="144" flags="8589934610" default="0" value="0"/>
+					<parameter name="Preserve Scale" id="152" flags="8589934610" default="1" value="1"/>
+					<parameter name="Fill" id="113" flags="8589938704">
+						<foldFlags>131072</foldFlags>
+						<parameter name="Fill Color" id="111" flags="12884906000">
+							<foldFlags>15</foldFlags>
+							<parameter name="Red" id="1" flags="8589934608" default="1" value="0.5372549295425415"/>
+							<parameter name="Green" id="2" flags="8589934608" default="1" value="0.15294118225574493"/>
+							<parameter name="Blue" id="3" flags="8589934608" default="1" value="0.21960784494876862"/>
+						</parameter>
+					</parameter>
+					<parameter name="Outline" id="108" flags="8589971472">
+						<foldFlags>131072</foldFlags>
+						<parameter name="Arrow Length" id="132" flags="8589934610" default="3" value="3"/>
+						<parameter name="Arrow Width" id="133" flags="8589934610" default="3" value="3"/>
+						<parameter name="Pressure Over Stroke" id="136" flags="8724348946">
+							<curve type="1" default="1" value="1" round="0">
+								<numberOfKeypoints>2</numberOfKeypoints>
+								<min>0</min>
+								<max>1</max>
+								<keypoint interpolation="1" flags="0">
+									<time>0 1 1 0</time>
+									<value>1</value>
+									<outputTangentTime>0.33333333333333331</outputTangentTime>
+									<outputTangentValue>0</outputTangentValue>
+								</keypoint>
+								<keypoint interpolation="1" flags="0">
+									<time>1 1 1 0</time>
+									<value>1</value>
+									<inputTangentTime>-0.33333333333333331</inputTangentTime>
+									<inputTangentValue>0</inputTangentValue>
+									<outputTangentTime>0.33333333333333331</outputTangentTime>
+									<outputTangentValue>-0</outputTangentValue>
+								</keypoint>
+							</curve>
+							<rangeName>Stroke Length</rangeName>
+						</parameter>
+						<parameter name="Pen Speed Over Stroke" id="138" flags="8724348946">
+							<curve type="1" default="1" value="1" round="0">
+								<numberOfKeypoints>2</numberOfKeypoints>
+								<min>0</min>
+								<max>1</max>
+								<keypoint interpolation="1" flags="0">
+									<time>0 1 1 0</time>
+									<value>1</value>
+									<outputTangentTime>0.33333333333333331</outputTangentTime>
+									<outputTangentValue>0</outputTangentValue>
+								</keypoint>
+								<keypoint interpolation="1" flags="0">
+									<time>1 1 1 0</time>
+									<value>1</value>
+									<inputTangentTime>-0.33333333333333331</inputTangentTime>
+									<inputTangentValue>0</inputTangentValue>
+									<outputTangentTime>0.33333333333333331</outputTangentTime>
+									<outputTangentValue>-0</outputTangentValue>
+								</keypoint>
+							</curve>
+							<rangeName>Stroke Length</rangeName>
+						</parameter>
+					</parameter>
+					<parameter name="Curvature" id="159" flags="12884901904" default="1" value="1"/>
+					<parameter name="Radius" id="160" flags="8589938704">
+						<foldFlags>8388623</foldFlags>
+						<parameter name="X" id="1" flags="12884901904" default="451.0205078125" value="451.0205078125"/>
+						<parameter name="Y" id="2" flags="12884901904" default="451.0205078125" value="451.0205078125"/>
+					</parameter>
+					<parameter name="Completed" id="157" flags="8589934610" default="0" value="1"/>
+				</parameter>
+			</parameter>
+		</scenenode>
 		<scenenode name="Circle" id="3011872863" factoryID="9" version="5">
 			<isShapeStyle>0</isShapeStyle>
 			<aspectRatio>1</aspectRatio>
@@ -3226,6 +3359,7 @@
 			<timing in="0 1 1 0" out="1530880 153600 1 0" offset="0 1 1 0"/>
 			<foldFlags>0</foldFlags>
 			<baseFlags>524304</baseFlags>
+			<enabled>0</enabled>
 			<parameter name="Properties" id="1" flags="8589938704">
 				<parameter name="Transform" id="100" flags="8589938704">
 					<parameter name="Position" id="101" flags="8589938704">
@@ -3343,8 +3477,7 @@
 
 	<footage name="Media Layer" id="3011872870">
 		<clip name="Screen Shot 2021-05-12 at 3.56.42 PM" id="3011872875">
-			<pathURL>file:///Users/colinmaretsky/Desktop/Screen%20Shot%202021-05-12%20at%203.56.42%20PM.png</pathURL>
-			<relativeURL>../../../Desktop/Screen%20Shot%202021-05-12%20at%203.56.42%20PM.png</relativeURL>
+			<pathURL>file:///Users/colinmaretsky/dev/portfolio-react/Desktop/Screen%20Shot%202021-05-12%20at%203.56.42%20PM.png</pathURL>
 			<missingWidth>162</missingWidth>
 			<missingHeight>148</missingHeight>
 			<missingDuration>0.033333333333333333</missingDuration>
@@ -3374,8 +3507,7 @@
 			</parameter>
 		</clip>
 		<clip name="Screen Shot 2021-05-12 at 3.55.49 PM" id="3011872873">
-			<pathURL>file:///Users/colinmaretsky/Desktop/Screen%20Shot%202021-05-12%20at%203.55.49%20PM.png</pathURL>
-			<relativeURL>../../../Desktop/Screen%20Shot%202021-05-12%20at%203.55.49%20PM.png</relativeURL>
+			<pathURL>file:///Users/colinmaretsky/dev/portfolio-react/Desktop/Screen%20Shot%202021-05-12%20at%203.55.49%20PM.png</pathURL>
 			<missingWidth>178</missingWidth>
 			<missingHeight>122</missingHeight>
 			<missingDuration>0.033333333333333333</missingDuration>
@@ -3405,8 +3537,7 @@
 			</parameter>
 		</clip>
 		<clip name="download" id="3011872869">
-			<pathURL>file:///Users/colinmaretsky/Desktop/download.jpg</pathURL>
-			<relativeURL>../../../Desktop/download.jpg</relativeURL>
+			<pathURL>file:///Users/colinmaretsky/dev/portfolio-react/Desktop/download.jpg</pathURL>
 			<missingWidth>225</missingWidth>
 			<missingHeight>225</missingHeight>
 			<missingDuration>0.033333333333333333</missingDuration>

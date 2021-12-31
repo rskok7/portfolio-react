@@ -1,30 +1,45 @@
-import React from "react";
-import { Link } from "react-scroll";
-import "./Header.css";
-import Logo from "../../images/logos/cm-logo_white.png";
+import React, { useEffect, useState, createRef, useContext } from 'react';
+import {
+  HeaderSection,
+  LogoLink,
+  Logo,
+  HeaderMenuButton,
+  HeaderMenuIcon,
+  Navicon,
+  Menu,
+  HeaderList,
+  HeaderLink,
+} from './styledHeader';
+import LogoImage from '../../images/logos/cm-logo_white.png';
+import { DraculaContext } from '../app/App';
 
 function Header() {
-  const [yOffset, setYOffset] = React.useState(window.pageYOffset);
-  const [scrolled, setScrolled] = React.useState(false);
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [mobileWidth, setMobileWidth] = React.useState(false);
+  const [yOffset, setYOffset] = useState(window.pageYOffset);
+  const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mobileWidth, setMobileWidth] = useState(false);
+  const draculaMode = useContext(DraculaContext);
+  // const menuRef = createRef();
+  // const naviconRef = createRef();
 
-  React.useEffect(() => {
+  // sets background color based on page scroll
+  useEffect(() => {
     function changePageYOffset() {
       setYOffset(window.pageYOffset);
     }
-    window.addEventListener("scroll", changePageYOffset);
-    if (yOffset >= window.innerHeight * 0.7) {
+    window.addEventListener('scroll', changePageYOffset);
+    if (yOffset >= window.innerHeight * 0.75) {
       setScrolled(true);
     } else {
       setScrolled(false);
     }
-    return () => window.removeEventListener("scroll", changePageYOffset);
+    return () => window.removeEventListener('scroll', changePageYOffset);
   }, [yOffset]);
 
-  React.useEffect(() => {
+  // measures pageWidth for mobile menu
+  useEffect(() => {
     function checkWidth() {
-      const windowWidth = window.matchMedia("(max-width: 769px)");
+      const windowWidth = window.matchMedia('(max-width: 769px)');
       if (windowWidth.matches) {
         setMobileWidth(true);
       } else {
@@ -32,78 +47,102 @@ function Header() {
       }
     }
     checkWidth();
-    window.addEventListener("resize", checkWidth);
-    return () => window.removeEventListener("resize", checkWidth);
+    window.addEventListener('resize', checkWidth);
+    return () => window.removeEventListener('resize', checkWidth);
   });
 
+  // toggles mobile menu open
   function onNavClick() {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  // close menu with ESC key
+  useEffect(() => {
+    function keyPress(e) {
+      if (e.key === 'Escape') {
+        setIsMenuOpen(false);
+      }
+    }
+    window.addEventListener('keydown', keyPress);
+    return () => window.removeEventListener('keydown', keyPress);
+  });
+
+  // useEffect(() => {
+  //   function checkIfClickedOutside(e) {
+  //     console.log(e.target)
+  //     if (menuRef.current && !menuRef.current.contains(e.target)) {
+  //       setIsMenuOpen(false);
+  //       console.log(menuRef)
+  //     }
+  //   }
+
+  //   window.addEventListener('mousedown', checkIfClickedOutside);
+
+  //   return () => window.removeEventListener('mousedown', checkIfClickedOutside);
+  // }, [isMenuOpen]);
+
+  console.log(isMenuOpen);
+
   return (
-    <header className={`header ${scrolled ? "header_scroll" : ""}`}>
-      <Link className="logo-link logo-link_type_white" to="lead" smooth={true}>
-        <img className="logo" src={Logo} alt="" />
-      </Link>
-      <input
-        className="header__menu-btn"
-        type="checkbox"
-        id="header__menu-btn"
+    <HeaderSection scrolled={scrolled} draculaMode={draculaMode}>
+      <LogoLink to='lead' smooth={true}>
+        <Logo src={LogoImage} alt='' />
+      </LogoLink>
+
+      <HeaderMenuButton
+        type='checkbox'
+        id='header__menu-btn'
         onClick={onNavClick}
         checked={isMenuOpen ? true : false}
       />
-      <label className="header__menu-icon" htmlFor="header__menu-btn">
-        <span className="navicon"></span>
-      </label>
-      <ul className={`menu ${isMenuOpen ? "menu-active" : "menu-inactive"}`}>
-        <li className="header__list">
-          <Link
-            className="header__link"
-            activeClass="active"
-            to="lead"
+      <HeaderMenuIcon htmlFor='header__menu-btn'>
+        <Navicon isMenuOpen={isMenuOpen}></Navicon>
+      </HeaderMenuIcon>
+      <Menu isMenuOpen={isMenuOpen} draculaMode={draculaMode}>
+        <HeaderList>
+          <HeaderLink
+            activeClass='active'
+            to='lead'
             smooth={true}
             onClick={onNavClick}
-          >
+            draculaMode={draculaMode}>
             Home
-          </Link>
-        </li>
-        <li className="header__list">
-          <Link
-            className="header__link"
-            activeClass="active"
-            to="about"
+          </HeaderLink>
+        </HeaderList>
+        <HeaderList>
+          <HeaderLink
+            activeClass='active'
+            to='about'
             smooth={true}
             onClick={onNavClick}
             offset={mobileWidth ? -70 : 0}
-          >
+            draculaMode={draculaMode}>
             About
-          </Link>
-        </li>
-        <li className="header__list">
-          <Link
-            className="header__link"
-            activeClass="active"
-            to="projects"
+          </HeaderLink>
+        </HeaderList>
+        <HeaderList>
+          <HeaderLink
+            activeClass='active'
+            to='projects'
             smooth={true}
             onClick={onNavClick}
             offset={80}
-          >
+            draculaMode={draculaMode}>
             Portfolio
-          </Link>
-        </li>
-        <li className="header__list">
-          <Link
-            className="header__link"
-            activeClass="active"
-            to="contact"
+          </HeaderLink>
+        </HeaderList>
+        <HeaderList>
+          <HeaderLink
+            activeClass='active'
+            to='contact'
             smooth={true}
             onClick={onNavClick}
-          >
+            draculaMode={draculaMode}>
             Contact
-          </Link>
-        </li>
-      </ul>
-    </header>
+          </HeaderLink>
+        </HeaderList>
+      </Menu>
+    </HeaderSection>
   );
 }
 

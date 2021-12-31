@@ -1,13 +1,16 @@
-import React from 'react';
-import './Footer.css';
+import React, { useContext } from 'react';
+import { FooterContainer, FooterText } from './styledFooter';
+import { DraculaContext } from '../app/App';
 
-function Footer () {
-    return (
-        <footer className="footer">
-            <p className="footer__text">Designed and built by Colin Maretsky</p>
-            <p className="footer__text">The Year of Our Lord, 2021</p>
-        </footer>
-    )
+function Footer() {
+  const draculaMode = useContext(DraculaContext);
+
+  return (
+    <FooterContainer>
+      <FooterText>Designed and built by Colin Maretsky</FooterText>
+      <FooterText>The Year of {draculaMode ? 'Vlad the Impaler, 593' : 'Our Lord, 2021'}</FooterText>
+    </FooterContainer>
+  );
 }
 
 export default Footer;
