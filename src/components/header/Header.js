@@ -28,7 +28,7 @@ function Header() {
       setYOffset(window.pageYOffset);
     }
     window.addEventListener('scroll', changePageYOffset);
-    if (yOffset >= window.innerHeight * 0.8) {
+    if (yOffset >= window.innerHeight * 0.75) {
       setScrolled(true);
     } else {
       setScrolled(false);
