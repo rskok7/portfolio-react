@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 import './vendor/normalize.css';
 import App from './components/app/App.js';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
