@@ -34,7 +34,7 @@ export const DraculaButton = styled.div`
   right: 20px;
   padding: 10px 10px;
   background: ${(props) => (props.draculaMode ? '#892738' : 'grey')};
-  border: 3px solid #2b303b;
+  border: 2px solid #2b303b;
   border-radius: 25px;
   transform: scale(1);
   transition: all 0.4s ease;
