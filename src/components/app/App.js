@@ -33,9 +33,9 @@ function App() {
       const favicon = document.getElementById('favicon');
 
       if (draculaMode) {
-        favicon.href = '../images/favicons/favicon-red/apple-touch-icon.png';
+        favicon.href = 'apple-touch-icon-red.png';
       } else {
-        favicon.href = '../images/favicons/favicon-blue/apple-touch-icon.png';
+        favicon.href = 'apple-touch-icon-blue.png';
       }
     };
     faviconUpdate();

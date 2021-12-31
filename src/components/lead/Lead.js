@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
 import { DraculaContext } from '../app/App';
-import Anime from '../../images/colin-anime-profile/colin-anime-reduced.png';
-import AnimeRegular from '../../images/colin-anime-profile/colin-anime.png';
-import AnimeDracula from '../../images/colin-anime-profile/colin-anime-dracula.png';
+import AnimeRegular from '../../images/colin-anime-profile/colin-anime-reduced.png';
+import AnimeDracula from '../../images/colin-anime-profile/colin-anime-dracula-reduced.png';
 import CurvedBottomImage from '../../images/curved-bottom.png';
 import {
   LeadSection,
