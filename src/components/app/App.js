@@ -6,28 +6,19 @@ import About from '../about/About.js';
 import Projects from '../projects/Projects.js';
 import Contact from '../contact/Contact.js';
 import Footer from '../footer/Footer.js';
-import LoadingScreen from '../../images/logos/loading-logo.png';
 import projectCards from '../../arrays/project-cards';
 import {
   AppContainer,
-  LoadingScreenComponent,
-  LoadingScreenLogo,
   DraculaButtonContainer,
   DraculaButton,
-  SpanContainer,
   EmojiSpan,
   TextSpan,
 } from './styledApp';
 export const DraculaContext = createContext();
 
 function App() {
-  const [loading, setLoading] = React.useState(false);
   const [draculaMode, setDraculaMode] = React.useState(false);
   const [isDraculaHovered, setIsDraculaHovered] = React.useState(false);
-
-  // useEffect(() => {
-  //   setTimeout(() => setLoading(false), 2000);
-  // }, []);
 
   function toggleDraculaMode() {
     setDraculaMode(!draculaMode);
@@ -52,12 +43,8 @@ function App() {
 
   return (
     <>
-      {/* <LoadingScreenComponent>
-        <LoadingScreenLogo src={LoadingScreen} alt='' />
-      </LoadingScreenComponent> */}
-
       <DraculaContext.Provider value={draculaMode}>
-        <AppContainer $loading={loading} draculaMode={draculaMode}>
+        <AppContainer draculaMode={draculaMode}>
           <DraculaButtonContainer
             onMouseEnter={toggleDraculaHover}
             onMouseLeave={toggleDraculaHover}
