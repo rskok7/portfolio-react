@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { useEffect, createContext } from 'react';
 import { Route } from 'react-router-dom';
 import Header from '../header/Header.js';
 import Lead from '../lead/Lead.js';
@@ -25,9 +25,9 @@ function App() {
   const [draculaMode, setDraculaMode] = React.useState(false);
   const [isDraculaHovered, setIsDraculaHovered] = React.useState(false);
 
-  React.useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => setLoading(false), 2000);
+  // }, []);
 
   function toggleDraculaMode() {
     setDraculaMode(!draculaMode);
@@ -37,7 +37,18 @@ function App() {
     setIsDraculaHovered(!isDraculaHovered);
   }
 
-  console.log(isDraculaHovered);
+  useEffect(() => {
+    const faviconUpdate = async () => {
+      const favicon = document.getElementById('favicon');
+
+      if (draculaMode) {
+        favicon.href = '../images/favicons/favicon-red/apple-touch-icon.png';
+      } else {
+        favicon.href = '../images/favicons/favicon-blue/apple-touch-icon.png';
+      }
+    };
+    faviconUpdate();
+  }, [draculaMode]);
 
   return (
     <>
