@@ -24,7 +24,6 @@ export const LeadContainer = styled.div`
   text-align: center;
   color: white;
   width: 100%;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
