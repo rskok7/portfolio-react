@@ -6,7 +6,8 @@ import CurvedBottomImage from '../../images/curved-bottom.png';
 import {
   LeadSection,
   LeadContainer,
-  LeadImage,
+  LeadImageRegular,
+  LeadImageDracula,
   LeadTitle,
   LeadSubtitle,
   CurvedBottom,
@@ -19,7 +20,8 @@ function Lead() {
     <>
       <LeadSection id='lead' draculaMode={draculaMode}>
         <LeadContainer>
-          <LeadImage src={draculaMode ? AnimeDracula : AnimeRegular} alt='' />
+          <LeadImageRegular src={AnimeRegular} alt='' draculaMode={draculaMode} />
+          <LeadImageDracula src={AnimeDracula} alt='' draculaMode={draculaMode} />
           <LeadTitle className='lead__title'>Hi, I'm Colin.</LeadTitle>
           <LeadSubtitle className='lead__subtitle'>I like bringing ideas to life.</LeadSubtitle>
         </LeadContainer>

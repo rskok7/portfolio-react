@@ -81,8 +81,6 @@ function Header() {
   //   return () => window.removeEventListener('mousedown', checkIfClickedOutside);
   // }, [isMenuOpen]);
 
-  console.log(isMenuOpen);
-
   return (
     <HeaderSection scrolled={scrolled} draculaMode={draculaMode}>
       <LogoLink to='lead' smooth={true}>

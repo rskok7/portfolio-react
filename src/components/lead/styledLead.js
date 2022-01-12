@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const LeadSection = styled.section`
   height: 85vh;
@@ -20,24 +20,38 @@ export const LeadSection = styled.section`
   }
 `;
 
-const backgroundTransition = keyframes`  
-0% {background: linear-gradient(45deg, #804c79, #46338E); }
-100% { background: #7cd5df;};
-`;
-
 export const LeadContainer = styled.div`
   text-align: center;
   color: white;
   width: 100%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (max-width: 768px) {
     width: 90%;
   }
 `;
 
-export const LeadImage = styled.img`
+export const LeadImageRegular = styled.img`
   max-width: 250px;
   width: 100%;
+  display: ${(props) => (props.draculaMode ? 'none' : 'block')};
+
+  @media (max-width: 510px) {
+    max-width: 200px;
+  }
+
+  @media (max-width: 320px) {
+    max-width: 175px;
+  }
+`;
+
+export const LeadImageDracula = styled.img`
+  max-width: 250px;
+  width: 100%;
+  display: ${props => props.draculaMode ? 'block' : 'none'};
 
   @media (max-width: 510px) {
     max-width: 200px;
