@@ -1,4 +1,4 @@
-import React, { useEffect, createContext } from 'react';
+import React, { useEffect, useState, createContext } from 'react';
 import { Route } from 'react-router-dom';
 import Header from '../header/Header.js';
 import Lead from '../lead/Lead.js';
@@ -17,15 +17,31 @@ import {
 export const DraculaContext = createContext();
 
 function App() {
-  const [draculaMode, setDraculaMode] = React.useState(false);
-  const [isDraculaHovered, setIsDraculaHovered] = React.useState(false);
+  const [mobileWidth, setMobileWidth] = useState(false);
+  const [draculaMode, setDraculaMode] = useState(false);
+  const [isDraculaHovered, setIsDraculaHovered] = useState(false);
+
+  // measures pageWidth for mobile menu
+  useEffect(() => {
+    function checkWidth() {
+      const windowWidth = window.matchMedia('(max-width: 510px)');
+      if (windowWidth.matches) {
+        setMobileWidth(true);
+      } else {
+        setMobileWidth(false);
+      }
+    }
+    checkWidth();
+    window.addEventListener('resize', checkWidth);
+    return () => window.removeEventListener('resize', checkWidth);
+  });
 
   function toggleDraculaMode() {
     setDraculaMode(!draculaMode);
   }
 
   function toggleDraculaHover() {
-    setIsDraculaHovered(!isDraculaHovered);
+    mobileWidth ? setIsDraculaHovered(false) : setIsDraculaHovered(!isDraculaHovered);
   }
 
   useEffect(() => {
@@ -48,11 +64,13 @@ function App() {
           <DraculaButtonContainer
             onMouseEnter={toggleDraculaHover}
             onMouseLeave={toggleDraculaHover}
-            isDraculaHovered={isDraculaHovered}>
+            isDraculaHovered={isDraculaHovered}
+            >
             <DraculaButton
               onClick={toggleDraculaMode}
               draculaMode={draculaMode}
-              isDraculaHovered={isDraculaHovered}>
+              // isDraculaHovered={isDraculaHovered}
+              >
               <EmojiSpan>🧛</EmojiSpan>
               <TextSpan>Dracula Mode {draculaMode ? 'on' : 'off'}</TextSpan>
             </DraculaButton>

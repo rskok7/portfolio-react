@@ -41,9 +41,15 @@ export const DraculaButton = styled.div`
   user-select: none;
   opacity: 0.8;
 
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.15);
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.15);
+    }
+  }
+
+  @media (max-width: 510px) {
+    -webkit-tap-highlight-color: transparent;
   }
 `;
 
@@ -52,24 +58,50 @@ export const DraculaButtonContainer = styled.div`
   width: 150px;
   height: 150px;
   top: 200px;
-  right: ${(props) => (props.isDraculaHovered ? '-5px' : '-50px')};
+  right: -50px;
   transition: all 0.4s ease;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   z-index: 3;
 
-  &:hover ${EmojiSpan} {
-    opacity: 0;
+  @media (hover: hover) {
+    &:hover {
+      right: -5px;
+    }
+
+    &:hover ${EmojiSpan} {
+      opacity: 0;
+    }
+
+    &:hover ${TextSpan} {
+      opacity: 1;
+    }
+
+    &:hover ${DraculaButton} {
+      height: 10px;
+      width: 100px;
+      opacity: 1;
+    }
   }
 
-  &:hover ${TextSpan} {
-    opacity: 1;
-  }
+  @media (max-width: 510px) {
+    &:hover {
+      right: -50px;
+    }
 
-  &:hover ${DraculaButton} {
-    height: 10px;
-    width: 100px;
-    opacity: 1;
+    &:hover ${EmojiSpan} {
+      opacity: 1;
+    }
+
+    &:hover ${TextSpan} {
+      opacity: 0;
+    }
+
+    &:hover ${DraculaButton} {
+      height: 5px;
+      width: 35px;
+      opacity: 1;
+    }
   }
 `;

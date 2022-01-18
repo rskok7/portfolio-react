@@ -17,7 +17,7 @@ function Header() {
   const [yOffset, setYOffset] = useState(window.pageYOffset);
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [mobileWidth, setMobileWidth] = useState(false);
+  const [smallDisplayWidth, setSmallDisplayWidth] = useState(false);
   const draculaMode = useContext(DraculaContext);
   // const menuRef = createRef();
   // const naviconRef = createRef();
@@ -41,9 +41,9 @@ function Header() {
     function checkWidth() {
       const windowWidth = window.matchMedia('(max-width: 769px)');
       if (windowWidth.matches) {
-        setMobileWidth(true);
+        setSmallDisplayWidth(true);
       } else {
-        setMobileWidth(false);
+        setSmallDisplayWidth(false);
       }
     }
     checkWidth();
@@ -113,7 +113,7 @@ function Header() {
             to='about'
             smooth={true}
             onClick={onNavClick}
-            offset={mobileWidth ? -70 : -25}
+            offset={smallDisplayWidth ? -70 : -25}
             draculaMode={draculaMode}>
             About
           </HeaderLink>

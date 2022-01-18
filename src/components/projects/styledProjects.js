@@ -92,6 +92,6 @@ export const ProjectsGrid = styled.article`
   }
 
   @media (max-width: 320px) {
-    row-gap: 30px;
+    grid-row-gap: 30px;
   }
 `;

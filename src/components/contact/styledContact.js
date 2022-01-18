@@ -57,6 +57,7 @@ export const ContactButton = styled.a`
   border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -webkit-tap-highlight-color: transparent;
   appearance: none;
   height: 50px;
   line-height: 50px;

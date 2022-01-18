@@ -69,9 +69,9 @@ export const HeaderMenuButton = styled.input`
 
 export const HeaderMenuIcon = styled.label`
   @media (max-width: 510px) {
+    -webkit-tap-highlight-color: transparent;
     cursor: pointer;
     display: inline-block;
-    /* float: right; */
     padding: 28px 20px;
     position: relative;
     user-select: none;
