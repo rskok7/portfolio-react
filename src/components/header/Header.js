@@ -67,23 +67,9 @@ function Header() {
     return () => window.removeEventListener('keydown', keyPress);
   });
 
-  // useEffect(() => {
-  //   function checkIfClickedOutside(e) {
-  //     console.log(e.target)
-  //     if (menuRef.current && !menuRef.current.contains(e.target)) {
-  //       setIsMenuOpen(false);
-  //       console.log(menuRef)
-  //     }
-  //   }
-
-  //   window.addEventListener('mousedown', checkIfClickedOutside);
-
-  //   return () => window.removeEventListener('mousedown', checkIfClickedOutside);
-  // }, [isMenuOpen]);
-
   return (
     <HeaderSection scrolled={scrolled} draculaMode={draculaMode}>
-      <LogoLink to='lead' smooth={true}>
+      <LogoLink to='lead' smooth={true} onClick={() => setIsMenuOpen(false)}>
         <Logo src={LogoImage} alt='' />
       </LogoLink>
 

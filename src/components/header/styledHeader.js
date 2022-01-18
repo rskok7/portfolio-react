@@ -132,7 +132,7 @@ export const Menu = styled.ul`
     top: 84px;
     right: 0;
     overflow: hidden;
-    background-color: ${(props) => (props.draculaMode ? '#A0A9BA' : 'white')};
+    background-color: ${(props) => (props.draculaMode ? '#ccd3de' : 'white')};
     border-radius: 7px;
     box-shadow: ${(props) =>
       props.draculaMode

@@ -15,11 +15,11 @@ export const ProjectCardContainer = styled.div`
   }
 
   @media (max-width: 510px) {
-    max-height: 700px;
+    height: 90%;
     display: flex;
     flex-direction: column;
     background-color: ${(props) =>
-      props.draculaMode ? 'rgba(124, 130, 142, 0.7)' : 'rgba(233, 240, 243, 0.7)'};
+      props.draculaMode ? 'rgba(176, 180, 188, 0.7)' : 'rgba(233, 240, 243, 0.7)'};
     padding: 20px 0;
     border-radius: 25px;
 
@@ -33,11 +33,13 @@ export const ProjectImageLink = styled.a`
   @media (max-width: 510px) {
     display: flex;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
   }
 `;
 
 export const ProjectImage = styled.img`
   width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 25px;
   box-shadow: ${(props) =>
@@ -45,7 +47,7 @@ export const ProjectImage = styled.img`
       ? '0px 10px 0px rgba(124, 130, 142, 0.7)'
       : '0px 10px 1px rgba(233, 240, 243, 0.7)'};
   @media (max-width: 510px) {
-    width: 90%;
+    width: 95%;
     margin: auto;
   }
 `;
@@ -80,6 +82,11 @@ export const ProjectTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-top: 15px;
+
+  @media (max-width: 510px) {
+    margin-top: 0;
+  }
 `;
 
 export const ProjectText = styled.p`
@@ -91,14 +98,30 @@ export const ProjectText = styled.p`
   margin-left: auto;
   margin-right: auto;
   padding: 0;
+  user-select: none;
+
+  @media (max-width: 670px) {
+    font-size: 13px;
+    margin-top: 15px;
+    line-height: 1.8;
+  }
 
   @media (max-width: 510px) {
     color: black;
+    font-size: 16px;
+    line-height: 1.8;
     padding: 5px 0;
     position: static;
-    width: 90%;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    width: 95%;
+    margin-bottom: 5px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 13px;
   }
 `;
 
@@ -122,6 +145,11 @@ export const ProjectLink = styled.a`
   font-weight: 400;
   cursor: pointer;
   width: 60px;
+  -webkit-tap-highlight-color: transparent;
+
+  @media (max-width: 400px) {
+    padding: 0;
+  }
 `;
 
 export const ProjectIcon = styled.img`

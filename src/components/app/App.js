@@ -65,9 +65,7 @@ function App() {
             onMouseEnter={toggleDraculaHover}
             onMouseLeave={toggleDraculaHover}
             isDraculaHovered={isDraculaHovered}>
-            <DraculaButton
-              onClick={toggleDraculaMode}
-              draculaMode={draculaMode}>
+            <DraculaButton onClick={toggleDraculaMode} draculaMode={draculaMode}>
               <EmojiSpan>🧛</EmojiSpan>
               <TextSpan>Dracula Mode {draculaMode ? 'on' : 'off'}</TextSpan>
             </DraculaButton>
@@ -82,7 +80,7 @@ function App() {
             <About />
           </Route>
           <Route name='projects'>
-            <Projects data={projectCards} />
+            <Projects data={projectCards} mobileWidth={mobileWidth} />
           </Route>
           <Route name='about'>
             <Contact />

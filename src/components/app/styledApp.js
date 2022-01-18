@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const AppContainer = styled.div`
   font-family: 'Nunito', sans-serif;
-  background: ${(props) => (props.draculaMode ? '#A0A9BA' : '')};
+  background: ${(props) => (props.draculaMode ? '#ccd3de' : '')};
 `;
 
 export const EmojiSpan = styled.span`

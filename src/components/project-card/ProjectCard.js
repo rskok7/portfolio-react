@@ -16,38 +16,25 @@ import BlackGlobeIcon from '../../images/link-icons/globe-icon-black.png';
 import WhiteCatIcon from '../../images/link-icons/cat-icon-white.png';
 import BlackCatIcon from '../../images/link-icons/cat-icon-black.png';
 
-function ProjectCard(props) {
-  const [mobileWidth, setMobileWidth] = React.useState(false);
-  const draculaMode = useContext(DraculaContext)
-
-  React.useEffect(() => {
-    function checkWidth() {
-      const windowWidth = window.matchMedia('(max-width: 510px)');
-      if (windowWidth.matches) {
-        setMobileWidth(true);
-      } else {
-        setMobileWidth(false);
-      }
-    }
-    checkWidth();
-    window.addEventListener('resize', checkWidth);
-    return () => window.removeEventListener('resize', checkWidth);
-  });
+function ProjectCard({ pageLink, mainImage, alt, cardParagraph, githubLink, mobileWidth }) {
+  const draculaMode = useContext(DraculaContext);
 
   return (
     <ProjectCardContainer draculaMode={draculaMode}>
-      <ProjectImageLink href={props.pageLink} target='_blank' rel='noreferrer'>
-        <ProjectImage src={props.mainImage} alt={props.alt} draculaMode={draculaMode} />
+      <ProjectImageLink href={pageLink} target='_blank' rel='noreferrer'>
+        <ProjectImage src={mainImage} alt={alt} draculaMode={draculaMode} />
       </ProjectImageLink>
       <ProjectOverlay>
         <ProjectTextContainer>
-          <ProjectText>{props.cardParagraph}</ProjectText>
+          <ProjectText draculaMode={draculaMode} mobileWidth={mobileWidth}>
+            {cardParagraph}
+          </ProjectText>
         </ProjectTextContainer>
         <ProjectLinks>
-          <ProjectLink href={props.pageLink} target='_blank' rel='noreferrer'>
+          <ProjectLink href={pageLink} target='_blank' rel='noreferrer'>
             <ProjectIcon src={mobileWidth ? BlackGlobeIcon : WhiteGlobeIcon} alt='' />
           </ProjectLink>
-          <ProjectLink href={props.githubLink} target='_blank' rel='noreferrer'>
+          <ProjectLink href={githubLink} target='_blank' rel='noreferrer'>
             <ProjectIcon src={mobileWidth ? BlackCatIcon : WhiteCatIcon} alt='' />
           </ProjectLink>
         </ProjectLinks>

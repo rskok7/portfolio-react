@@ -9,7 +9,7 @@ import {
 import ProjectCard from '../project-card/ProjectCard';
 import { DraculaContext } from '../app/App';
 
-function Projects({ data }) {
+function Projects({ data, mobileWidth }) {
   const draculaMode = useContext(DraculaContext
     );
   return (
@@ -17,7 +17,7 @@ function Projects({ data }) {
       <ProjectsTextGroup draculaMode={draculaMode}>
         <ProjectsTitle>My Recent Projects</ProjectsTitle>
         <ProjectsSubtitle>
-          I’m never finished learning new things. The projects below show what I can do for you,
+          I'm never finished learning new things. The projects below show what I can do for you,
           your business, or your future ventures. Take a look:
         </ProjectsSubtitle>
       </ProjectsTextGroup>
@@ -30,6 +30,7 @@ function Projects({ data }) {
             cardParagraph={item.description}
             pageLink={item.pageLink}
             githubLink={item.githubLink}
+            mobileWidth={mobileWidth}
           />
         ))}
       </ProjectsGrid>

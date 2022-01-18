@@ -87,11 +87,12 @@ export const ProjectsGrid = styled.article`
 
   @media (max-width: 510px) {
     grid-template-columns: 1fr;
-    width: 80%;
+    width: 90%;
     margin-top: -225px;
   }
 
   @media (max-width: 320px) {
+    width: 90%;
     grid-row-gap: 30px;
   }
 `;
