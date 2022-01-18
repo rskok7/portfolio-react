@@ -64,13 +64,10 @@ function App() {
           <DraculaButtonContainer
             onMouseEnter={toggleDraculaHover}
             onMouseLeave={toggleDraculaHover}
-            isDraculaHovered={isDraculaHovered}
-            >
+            isDraculaHovered={isDraculaHovered}>
             <DraculaButton
               onClick={toggleDraculaMode}
-              draculaMode={draculaMode}
-              // isDraculaHovered={isDraculaHovered}
-              >
+              draculaMode={draculaMode}>
               <EmojiSpan>🧛</EmojiSpan>
               <TextSpan>Dracula Mode {draculaMode ? 'on' : 'off'}</TextSpan>
             </DraculaButton>
