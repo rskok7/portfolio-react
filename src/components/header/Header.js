@@ -17,7 +17,8 @@ function Header() {
   const [yOffset, setYOffset] = useState(window.pageYOffset);
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [smallDisplayWidth, setSmallDisplayWidth] = useState(false);
+  const [tabletDisplayWidth, setTabletDisplayWidth] = useState(false);
+  const [smallMobileDisplayWidth, setSmallMobileDisplayWidth] = useState(false);
   const draculaMode = useContext(DraculaContext);
   // const menuRef = createRef();
   // const naviconRef = createRef();
@@ -40,10 +41,17 @@ function Header() {
   useEffect(() => {
     function checkWidth() {
       const windowWidth = window.matchMedia('(max-width: 769px)');
+      const smallWindowWidth = window.matchMedia('(max-width: 400px)');
       if (windowWidth.matches) {
-        setSmallDisplayWidth(true);
+        setTabletDisplayWidth(true);
       } else {
-        setSmallDisplayWidth(false);
+        setTabletDisplayWidth(false);
+      }
+
+      if (smallWindowWidth.matches) {
+        setSmallMobileDisplayWidth(true)
+      } else {
+        setSmallMobileDisplayWidth(false)
       }
     }
     checkWidth();
@@ -99,7 +107,7 @@ function Header() {
             to='about'
             smooth={true}
             onClick={onNavClick}
-            offset={smallDisplayWidth ? -70 : -25}
+            offset={tabletDisplayWidth ? -70 : -25}
             draculaMode={draculaMode}>
             About
           </HeaderLink>
@@ -110,7 +118,7 @@ function Header() {
             to='projects'
             smooth={true}
             onClick={onNavClick}
-            offset={40}
+            offset={smallMobileDisplayWidth ? -20 : 40}
             draculaMode={draculaMode}>
             Portfolio
           </HeaderLink>
