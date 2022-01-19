@@ -66,7 +66,7 @@ const projectCards = [
     image: ProjectOneHomepageImage,
     alt: 'learning app homepage',
     description:
-      'A basic page focusing on optimizing learning techniques, made with image/video embedding, and CSS animations',
+      'A desktop page focusing on optimizing learning techniques, made with image/video embedding, and CSS animations',
     pageLink: 'https://cjmaret.github.io/web_project_1/',
     githubLink: 'https://github.com/cjmaret/web_project_1',
   },

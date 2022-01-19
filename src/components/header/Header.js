@@ -49,9 +49,9 @@ function Header() {
       }
 
       if (smallWindowWidth.matches) {
-        setSmallMobileDisplayWidth(true)
+        setSmallMobileDisplayWidth(true);
       } else {
-        setSmallMobileDisplayWidth(false)
+        setSmallMobileDisplayWidth(false);
       }
     }
     checkWidth();
@@ -74,6 +74,21 @@ function Header() {
     window.addEventListener('keydown', keyPress);
     return () => window.removeEventListener('keydown', keyPress);
   });
+
+  // // close menu on click outside
+  // useEffect(() => {
+  //   function checkIfClickedOutside(e) {
+  //     console.log(e.target)
+  //     if (menuRef.current && !menuRef.current.contains(e.target)) {
+  //       setIsMenuOpen(false);
+  //       console.log(menuRef)
+  //     }
+  //   }
+
+  //   window.addEventListener('mousedown', checkIfClickedOutside);
+
+  //   return () => window.removeEventListener('mousedown', checkIfClickedOutside);
+  // }, [isMenuOpen]);
 
   return (
     <HeaderSection scrolled={scrolled} draculaMode={draculaMode}>
