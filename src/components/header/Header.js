@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createRef, useContext } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
 import {
   HeaderSection,
   LogoLink,
@@ -20,8 +20,8 @@ function Header() {
   const [tabletDisplayWidth, setTabletDisplayWidth] = useState(false);
   const [smallMobileDisplayWidth, setSmallMobileDisplayWidth] = useState(false);
   const draculaMode = useContext(DraculaContext);
-  // const menuRef = createRef();
-  // const naviconRef = createRef();
+  const menuRef = useRef();
+  const headerMenuIconRef = useRef();
 
   // sets background color based on page scroll
   useEffect(() => {
@@ -61,7 +61,7 @@ function Header() {
 
   // toggles mobile menu open
   function onNavClick() {
-    setIsMenuOpen(!isMenuOpen);
+    isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
   }
 
   // close menu with ESC key
@@ -75,20 +75,22 @@ function Header() {
     return () => window.removeEventListener('keydown', keyPress);
   });
 
-  // // close menu on click outside
-  // useEffect(() => {
-  //   function checkIfClickedOutside(e) {
-  //     console.log(e.target)
-  //     if (menuRef.current && !menuRef.current.contains(e.target)) {
-  //       setIsMenuOpen(false);
-  //       console.log(menuRef)
-  //     }
-  //   }
+  // close menu on click outside
+  useEffect(() => {
+    function checkIfClickedOutside(e) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        !headerMenuIconRef.current.contains(e.target)
+      ) {
+        setIsMenuOpen(false);
+      }
+    }
 
-  //   window.addEventListener('mousedown', checkIfClickedOutside);
+    window.addEventListener('mousedown', checkIfClickedOutside);
 
-  //   return () => window.removeEventListener('mousedown', checkIfClickedOutside);
-  // }, [isMenuOpen]);
+    return () => window.removeEventListener('mousedown', checkIfClickedOutside);
+  }, [isMenuOpen]);
 
   return (
     <HeaderSection scrolled={scrolled} draculaMode={draculaMode}>
@@ -102,10 +104,10 @@ function Header() {
         onClick={onNavClick}
         checked={isMenuOpen ? true : false}
       />
-      <HeaderMenuIcon htmlFor='header__menu-btn'>
+      <HeaderMenuIcon htmlFor='header__menu-btn' ref={headerMenuIconRef}>
         <Navicon isMenuOpen={isMenuOpen}></Navicon>
       </HeaderMenuIcon>
-      <Menu isMenuOpen={isMenuOpen} draculaMode={draculaMode}>
+      <Menu isMenuOpen={isMenuOpen} draculaMode={draculaMode} ref={menuRef}>
         <HeaderList>
           <HeaderLink
             activeClass='active'
