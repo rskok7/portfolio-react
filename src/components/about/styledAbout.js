@@ -34,6 +34,26 @@ export const AboutIcon = styled.img`
   margin-bottom: 20px;
   width: 70%;
   max-width: 100px;
+  display: ${(props) => (props.draculaMode ? 'none' : 'block')};
+
+  @media (max-width: 666px) {
+    max-width: 60px;
+  }
+
+  @media (max-width: 510px) {
+    max-width: 80px;
+  }
+
+  @media (max-width: 400px) {
+    max-width: 50px;
+  }
+`;
+
+export const AboutIconDracula = styled.img`
+  margin-bottom: 20px;
+  width: 70%;
+  max-width: 100px;
+  display: ${(props) => (props.draculaMode ? 'block' : 'none')};
 
   @media (max-width: 666px) {
     max-width: 60px;
@@ -220,7 +240,9 @@ export const AboutLists = styled.article`
   max-width: 768px;
   margin: auto;
   box-shadow: ${(props) =>
-    props.draculaMode ? '5px 5px rgba(124, 130, 142, 0.7)' : '5px 5px rgba(233, 240, 243, 0.7)'};
+    props.draculaMode
+      ? '5px 5px rgba(124, 130, 142, 0.7)'
+      : '5px 5px rgba(233, 240, 243, 0.7)'};
   margin-top: 150px;
   background: ${(props) => (props.draculaMode ? '#892738' : '#7cd5df')};
 
