@@ -5,14 +5,24 @@ import PortlandPortfolioImage from '../images/web_project_3-images/portland-port
 import InstagramHomepageImage from '../images/web_project_4-images/instagram-homepage.png';
 import PlanetsReactImage from '../images/planets-react-images/planets-react-mainImage.png';
 import ApiaryHomepageImage from '../images/apiary-images/apiary-homepage.png';
-import NewsExplorerHomepageImage from '../images/news-explorer-images/news-explorer-homepage.png'
+import NewsExplorerHomepageImage from '../images/news-explorer-images/news-explorer-homepage.png';
+import DotcotHomepageImage from '../images/dotcot-images/dotcot-homepage.png';
 
 const projectCards = [
+  {
+    id: 9,
+    image: DotcotHomepageImage,
+    alt: 'Dotcot Homepage',
+    description:
+      'An app which connects investors and startups, featuring a news feed of tailor-made startup pitches',
+    pageLink: 'https://peaceful-woodland-39661.herokuapp.com/welcome',
+  },
   {
     id: 8,
     image: NewsExplorerHomepageImage,
     alt: 'News Explorer',
-    description: 'A news article website which lets users search for real-world news pieces, and save them for later reading',
+    description:
+      'A news article website which lets users search for real-world news pieces, and save them for later reading',
     pageLink: 'https://news-explorer-site.netlify.app/',
     githubLink: 'https://github.com/cjmaret/news-explorer-frontend',
   },

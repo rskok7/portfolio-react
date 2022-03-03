@@ -16,12 +16,19 @@ import BlackGlobeIcon from '../../images/link-icons/globe-icon-black.png';
 import WhiteCatIcon from '../../images/link-icons/cat-icon-white.png';
 import BlackCatIcon from '../../images/link-icons/cat-icon-black.png';
 
-function ProjectCard({ pageLink, mainImage, alt, cardParagraph, githubLink, mobileWidth }) {
+function ProjectCard({
+  pageLink,
+  mainImage,
+  alt,
+  cardParagraph,
+  githubLink,
+  mobileWidth,
+}) {
   const draculaMode = useContext(DraculaContext);
 
   return (
     <ProjectCardContainer draculaMode={draculaMode}>
-      <ProjectImageLink href={pageLink} target='_blank' rel='noreferrer'>
+      <ProjectImageLink href={pageLink} target="_blank" rel="noreferrer">
         <ProjectImage src={mainImage} alt={alt} draculaMode={draculaMode} />
       </ProjectImageLink>
       <ProjectOverlay>
@@ -31,12 +38,22 @@ function ProjectCard({ pageLink, mainImage, alt, cardParagraph, githubLink, mobi
           </ProjectText>
         </ProjectTextContainer>
         <ProjectLinks>
-          <ProjectLink href={pageLink} target='_blank' rel='noreferrer'>
-            <ProjectIcon src={mobileWidth ? BlackGlobeIcon : WhiteGlobeIcon} alt='' />
-          </ProjectLink>
-          <ProjectLink href={githubLink} target='_blank' rel='noreferrer'>
-            <ProjectIcon src={mobileWidth ? BlackCatIcon : WhiteCatIcon} alt='' />
-          </ProjectLink>
+          {pageLink && (
+            <ProjectLink href={pageLink} target="_blank" rel="noreferrer">
+              <ProjectIcon
+                src={mobileWidth ? BlackGlobeIcon : WhiteGlobeIcon}
+                alt=""
+              />
+            </ProjectLink>
+          )}
+          {githubLink && (
+            <ProjectLink href={githubLink} target="_blank" rel="noreferrer">
+              <ProjectIcon
+                src={mobileWidth ? BlackCatIcon : WhiteCatIcon}
+                alt=""
+              />
+            </ProjectLink>
+          )}
         </ProjectLinks>
       </ProjectOverlay>
     </ProjectCardContainer>
