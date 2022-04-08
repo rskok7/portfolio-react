@@ -7,8 +7,18 @@ import PlanetsReactImage from '../images/planets-react-images/planets-react-main
 import ApiaryHomepageImage from '../images/apiary-images/apiary-homepage.png';
 import NewsExplorerHomepageImage from '../images/news-explorer-images/news-explorer-homepage.png';
 import DotcotHomepageImage from '../images/dotcot-images/dotcot-homepage.png';
+import ConfectioneryImage from '../images/confectionery-images/confectionery-2.png'
 
 const projectCards = [
+    {
+    id: 10,
+    image: ConfectioneryImage,
+    alt: 'The Confectionery Homepage',
+    description:
+      'A video portfolio for a NYC-based filmmaking company, with a cinematic style and dynamic content management',
+    pageLink: 'https://goofy-jang-9e020a.netlify.app',
+    githubLink: 'https://github.com/cjmaret/confectionery',
+  },
   {
     id: 9,
     image: DotcotHomepageImage,
