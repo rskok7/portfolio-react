@@ -117,10 +117,11 @@ function About() {
           <ListTypeLanguages>
             <ListInteriorTitle>I Speak</ListInteriorTitle>
             <ListInteriorList>
-              <ListInteriorListItem>Node.js</ListInteriorListItem>
-              <ListInteriorListItem>Express.js</ListInteriorListItem>
-              <ListInteriorListItem>CSS</ListInteriorListItem>
-              <ListInteriorListItem>HTML5</ListInteriorListItem>
+              <ListInteriorListItem>Javascript</ListInteriorListItem>
+              <ListInteriorListItem>Gatsby</ListInteriorListItem>
+              <ListInteriorListItem>Next.js</ListInteriorListItem>
+              <ListInteriorListItem>GraphQL</ListInteriorListItem>
+              <ListInteriorListItem>CSS / HTML5</ListInteriorListItem>
             </ListInteriorList>
           </ListTypeLanguages>
 
@@ -128,13 +129,16 @@ function About() {
             <ListInteriorTitle>I Excel At</ListInteriorTitle>
             <ListInteriorList>
               <ListInteriorListItem>React</ListInteriorListItem>
-              <ListInteriorListItem>Javascript</ListInteriorListItem>
+              <ListInteriorListItem>Node.js</ListInteriorListItem>
+              <ListInteriorListItem>MongoDB</ListInteriorListItem>
+              <ListInteriorListItem>Express.js</ListInteriorListItem>
             </ListInteriorList>
           </ListTypeLearning>
 
           <ListTypeTools>
             <ListInteriorTitle>I Use</ListInteriorTitle>
             <ListInteriorList>
+              <ListInteriorListItem>VS Code</ListInteriorListItem>
               <ListInteriorListItem>Github</ListInteriorListItem>
               <ListInteriorListItem>Git</ListInteriorListItem>
               <ListInteriorListItem>Figma</ListInteriorListItem>
