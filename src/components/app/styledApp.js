@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const AppContainer = styled.div`
   font-family: 'Nunito', sans-serif;
-  background: ${(props) => (props.draculaMode ? '#ccd3de' : '')};
+  background: ${(props) => (props.draculaMode ? 'var(--draculaGrey)' : '')};
 `;
 
 export const EmojiSpan = styled.span`
@@ -33,7 +33,7 @@ export const DraculaButton = styled.div`
   width: 35px;
   right: 20px;
   padding: 10px 10px;
-  background: ${(props) => (props.draculaMode ? '#892738' : 'grey')};
+  background: ${(props) => (props.draculaMode ? 'var(--red)' : 'grey')};
   border: 2px solid #2b303b;
   border-radius: 25px;
   transform: scale(1);
@@ -64,7 +64,7 @@ export const DraculaButtonContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   z-index: 3;
-
+  border: 1px solid red;
   @media (hover: hover) {
     &:hover {
       right: -5px;
@@ -86,8 +86,12 @@ export const DraculaButtonContainer = styled.div`
   }
 
   @media (max-width: 510px) {
+    width: 50px;
+    height: 150px;
+    top: 200px;
+    right: -43px;
     &:hover {
-      right: -50px;
+      right: -43px;
     }
 
     &:hover ${EmojiSpan} {

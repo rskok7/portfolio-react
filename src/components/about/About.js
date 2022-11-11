@@ -113,7 +113,7 @@ function About() {
           </AboutMe>
         </AboutInfo>
 
-        <AboutLists draculaMode={draculaMode}>
+        {/* <AboutLists draculaMode={draculaMode}>
           <ListTypeLanguages>
             <ListInteriorTitle>I Speak</ListInteriorTitle>
             <ListInteriorList>
@@ -145,7 +145,7 @@ function About() {
               <ListInteriorListItem>Motion 5</ListInteriorListItem>
             </ListInteriorList>
           </ListTypeTools>
-        </AboutLists>
+        </AboutLists> */}
       </AboutExterior>
     </AboutSection>
   );

@@ -6,7 +6,6 @@ import About from '../about/About.js';
 import Projects from '../projects/Projects.js';
 import Contact from '../contact/Contact.js';
 import Footer from '../footer/Footer.js';
-import projectCards from '../../arrays/project-cards';
 import {
   AppContainer,
   DraculaButtonContainer,
@@ -14,6 +13,8 @@ import {
   EmojiSpan,
   TextSpan,
 } from './styledApp';
+
+
 export const DraculaContext = createContext();
 
 function App() {
@@ -41,7 +42,9 @@ function App() {
   }
 
   function toggleDraculaHover() {
-    mobileWidth ? setIsDraculaHovered(false) : setIsDraculaHovered(!isDraculaHovered);
+    mobileWidth
+      ? setIsDraculaHovered(false)
+      : setIsDraculaHovered(!isDraculaHovered);
   }
 
   useEffect(() => {
@@ -65,7 +68,9 @@ function App() {
             onMouseEnter={toggleDraculaHover}
             onMouseLeave={toggleDraculaHover}
             isDraculaHovered={isDraculaHovered}>
-            <DraculaButton onClick={toggleDraculaMode} draculaMode={draculaMode}>
+            <DraculaButton
+              onClick={toggleDraculaMode}
+              draculaMode={draculaMode}>
               <EmojiSpan>🧛</EmojiSpan>
               <TextSpan>Dracula Mode {draculaMode ? 'on' : 'off'}</TextSpan>
             </DraculaButton>
@@ -73,16 +78,16 @@ function App() {
           <Route>
             <Header />
           </Route>
-          <Route name='lead'>
+          <Route name="lead">
             <Lead />
           </Route>
-          <Route name='about'>
+          <Route name="about">
             <About />
           </Route>
-          <Route name='projects'>
-            <Projects data={projectCards} mobileWidth={mobileWidth} />
+          <Route name="projects">
+            <Projects mobileWidth={mobileWidth} />
           </Route>
-          <Route name='about'>
+          <Route name="about">
             <Contact />
           </Route>
           <Route>

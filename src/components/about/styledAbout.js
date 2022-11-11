@@ -202,7 +202,7 @@ export const AboutParagraph = styled.p`
 
 export const AboutAnimationLink = styled.a`
   text-decoration: none;
-  color: ${(props) => (props.draculaMode ? '#892738' : '#7cd5df')};
+  color: ${(props) => (props.draculaMode ? 'var(--red)' : 'var(--blue)')};
   font-weight: bold;
   transition: opacity 0.4s ease;
 
@@ -244,7 +244,7 @@ export const AboutLists = styled.article`
       ? '5px 5px rgba(124, 130, 142, 0.7)'
       : '5px 5px rgba(233, 240, 243, 0.7)'};
   margin-top: 150px;
-  background: ${(props) => (props.draculaMode ? '#892738' : '#7cd5df')};
+  background: ${(props) => (props.draculaMode ? 'var(--red)' : 'var(--blue)')};
 
   @media (max-width: 666px) {
     max-width: 666px;

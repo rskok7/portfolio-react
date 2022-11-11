@@ -8,7 +8,7 @@ import ApiaryHomepageImage from '../images/apiary-images/apiary-homepage.png';
 import NewsExplorerHomepageImage from '../images/news-explorer-images/news-explorer-homepage.png';
 import DotcotHomepageImage from '../images/dotcot-images/dotcot-homepage.png';
 import ConfectioneryImage from '../images/confectionery-images/confectionery-homepage.png';
-import HistoryMuffinImage from '../images/history-muffin-images/history-muffin-homepage.png'
+import HistoryMuffinImage from '../images/history-muffin-images/history-muffin-homepage.png';
 
 const projectCards = [
   {
@@ -19,6 +19,17 @@ const projectCards = [
       'An e-commerce store where users can purchase or sell products, create an account, manage their products, and make purchases using Stripe',
     pageLink: 'https://historymuffin.com',
     githubLink: 'https://github.com/cjmaret/history-muffin-frontend',
+    languages: [
+      'react',
+      'mongodb',
+      'graphql',
+      'keystone',
+      'typescript',
+      'next',
+      'jest',
+      'css',
+      'html5',
+    ],
   },
   {
     id: 10,
@@ -28,6 +39,7 @@ const projectCards = [
       'A video portfolio for a NYC-based filmmaking company, with a cinematic style and dynamic content management',
     pageLink: 'https://goofy-jang-9e020a.netlify.app',
     githubLink: 'https://github.com/cjmaret/confectionery',
+    languages: ['react', 'gatsby', 'contentful'],
   },
   {
     id: 9,
@@ -36,6 +48,7 @@ const projectCards = [
     description:
       'An app which connects investors and startups, featuring a news feed of tailor-made startup pitches',
     pageLink: 'https://peaceful-woodland-39661.herokuapp.com/welcome',
+    languages: ['react', 'mongodb', 'graphql', 'node', 'mocha', 'css', 'html5'],
   },
   {
     id: 8,
@@ -45,6 +58,7 @@ const projectCards = [
       'A news article website which lets users search for real-world news pieces, and save them for later reading',
     pageLink: 'https://news-explorer-site.netlify.app/',
     githubLink: 'https://github.com/cjmaret/news-explorer-frontend',
+    languages: ['react', 'mongodb', 'express', 'node', 'css', 'html5'],
   },
   {
     id: 7,
@@ -54,6 +68,7 @@ const projectCards = [
       'Ths project uses React and Contentful to allow the client to update relevant site content without having to interact with any code',
     pageLink: 'https://apiary-project.netlify.app/#/',
     githubLink: 'https://github.com/cjmaret/apiary',
+    languages: ['react', 'graphql', 'contentful', 'css', 'html5'],
   },
   {
     id: 6,
@@ -63,6 +78,7 @@ const projectCards = [
       'This aesthetic planets fact-site uses a Single Page App built by React, displaying its content in an optimized fashion',
     pageLink: 'https://cjmaret.github.io/planets-fact-site-react/',
     githubLink: 'https://github.com/cjmaret/planets-fact-site-react',
+    languages: ['react', 'css', 'html5'],
   },
   {
     id: 5,
@@ -72,6 +88,7 @@ const projectCards = [
       'An Instagram-style webpage which showcases Javascript form validation and image-card adding via templates',
     pageLink: 'https://cjmaret.students.nomoreparties.site/',
     githubLink: 'https://github.com/cjmaret/react-around-api-full',
+    languages: ['react', 'mongodb', 'express', 'node', 'css', 'html5'],
   },
   {
     id: 4,
@@ -81,6 +98,7 @@ const projectCards = [
       'A fully responsive travel-guide landing page following Figma designs, using HTML5, CSS Grid and Flexbox methods',
     pageLink: 'https://cjmaret.github.io/web_project_3/',
     githubLink: 'https://github.com/cjmaret/web_project_3',
+    languages: ['css', 'html5'],
   },
   {
     id: 3,
@@ -90,6 +108,7 @@ const projectCards = [
       'A series of small Javascript exercises displaying a range of functions, widgets, and designs',
     pageLink: 'https://cjmaret.github.io/Javascript-30-Days/',
     githubLink: 'https://github.com/cjmaret/Javascript-30-Days',
+    languages: ['vanillajs'],
   },
   {
     id: 2,
@@ -99,6 +118,7 @@ const projectCards = [
       'A desktop page focusing on optimizing learning techniques, made with image/video embedding, and CSS animations',
     pageLink: 'https://cjmaret.github.io/web_project_1/',
     githubLink: 'https://github.com/cjmaret/web_project_1',
+    languages: ['css', 'html5', 'vanillajs'],
   },
   {
     id: 1,
@@ -108,6 +128,7 @@ const projectCards = [
       "A minimalist portfolio, showcasing a sleek and functional layout, and emphasizing a 'less is more' design philosophy",
     pageLink: 'https://cjmaret.github.io/minimalist_portfolio_website/',
     githubLink: 'https://github.com/cjmaret/minimalist_portfolio_website',
+    languages: ['css', 'html5', 'vanillajs'],
   },
 ];
 

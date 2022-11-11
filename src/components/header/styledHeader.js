@@ -10,9 +10,9 @@ export const HeaderSection = styled.header`
   width: 100vw;
   background-color: ${(props) => {
     if (props.scrolled && props.draculaMode) {
-      return '#892738';
+      return 'var(--red)';
     } else if (props.scrolled) {
-      return '#7cd5df';
+      return 'var(--blue)';
     } else {
       return '';
     }
@@ -101,12 +101,14 @@ export const Navicon = styled.span`
 
     &:before {
       top: ${(props) => (props.isMenuOpen ? '0px' : '7px')};
-      transform: ${(props) => (props.isMenuOpen ? 'rotate(-45deg)' : 'rotate(0deg)')};
+      transform: ${(props) =>
+        props.isMenuOpen ? 'rotate(-45deg)' : 'rotate(0deg)'};
     }
 
     &:after {
       top: ${(props) => (props.isMenuOpen ? '0' : '-7px')};
-      transform: ${(props) => (props.isMenuOpen ? 'rotate(45deg)' : 'rotate(0deg)')};
+      transform: ${(props) =>
+        props.isMenuOpen ? 'rotate(45deg)' : 'rotate(0deg)'};
     }
   }
 `;
@@ -132,7 +134,8 @@ export const Menu = styled.ul`
     top: 84px;
     right: 0;
     overflow: hidden;
-    background-color: ${(props) => (props.draculaMode ? '#ccd3de' : 'white')};
+    background-color: ${(props) =>
+      props.draculaMode ? 'var(--draculaGrey)' : 'white'};
     border-radius: 7px;
     box-shadow: ${(props) =>
       props.draculaMode
@@ -170,6 +173,6 @@ export const HeaderLink = styled(Link)`
     margin: 25px 60px 25px 30px;
     text-decoration: none;
     text-align: left;
-    color: ${(props) => (props.draculaMode ? '#892738' : '#7cd5df')};
+    color: ${(props) => (props.draculaMode ? 'var(--red)' : 'var(--blue)')};
   }
 `;

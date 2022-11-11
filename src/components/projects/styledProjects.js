@@ -8,20 +8,32 @@ export const ProjectsSection = styled.section`
   }
 `;
 
-export const ProjectsTextGroup = styled.div`
+const ProjectsTextGroup = styled.div`
   padding-top: 125px;
   padding-bottom: 250px;
   width: 100%;
   margin: 0 auto 50px auto;
   position: relative;
-  background: ${(props) => (props.draculaMode ? '#892738' : '#7cd5df')};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: ${(props) => (props.draculaMode ? 'var(--red)' : 'var(--blue)')};
 
   @media (max-width: 320px) {
     padding: 70px 0 225px 0;
   }
 `;
 
-export const ProjectsTitle = styled.h2`
+export const FeaturedProjectsTextGroup = styled(ProjectsTextGroup)``;
+
+export const AllProjectsTextGroup = styled(ProjectsTextGroup)`
+  margin: 0;
+  padding: 50px 0 0 0;
+  background-color: ${(props) =>
+    props.draculaMode ? 'var(--draculaGrey)' : 'white'}; ;
+`;
+
+const ProjectsTitle = styled.h2`
   text-align: center;
   font-size: 50px;
   margin-top: 0;
@@ -36,6 +48,16 @@ export const ProjectsTitle = styled.h2`
     font-size: 35px;
     margin: auto;
     margin-bottom: 30px;
+  }
+`;
+
+export const FeaturedProjectsTitle = styled(ProjectsTitle)``;
+
+export const AllProjectsTitle = styled(ProjectsTitle)`
+
+  color: var(--grey);
+  @media (max-width: 500px) {
+    margin-bottom: 10px;
   }
 `;
 
@@ -65,7 +87,59 @@ export const ProjectsSubtitle = styled.p`
   }
 `;
 
-export const ProjectsGrid = styled.article`
+export const ProjectsCategories = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 900px;
+  @media (max-width: 500px) {
+    margin-bottom: 25px;
+    width: 95%;
+  }
+`;
+
+function determineButtonColor(draculaMode, itemClicked) {
+  if (draculaMode && itemClicked) {
+    return 'var(--red)';
+  } else if (!draculaMode && itemClicked) {
+    return 'var(--blue)';
+  } else {
+    return 'none';
+  }
+}
+
+export const ProjectsCategoryItem = styled.p`
+  user-select: none;
+  border: ${(props) =>
+    props.itemClicked
+      ? '1.5px solid rgba(0, 0, 0, 0)'
+      : '1.5px solid rgba(58, 58, 58, .2)'};
+  background-color: ${(props) =>
+    determineButtonColor(props.draculaMode, props.itemClicked)};
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  color: ${(props) => (props.itemClicked ? 'white' : 'rgba(58, 58, 58, .8)')};
+  margin: 0.5rem 0.5rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  transition: all 0.4s ease;
+  -webkit-tap-highlight-color: transparent;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  @media (max-width: 500px) {
+    font-size: 1.2rem;
+    &:hover {
+      opacity: 1;
+    }
+  }
+`;
+
+const ProjectsGrid = styled.article`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 48px;
@@ -95,4 +169,17 @@ export const ProjectsGrid = styled.article`
     width: 90%;
     grid-row-gap: 30px;
   }
+`;
+
+export const FeaturedProjectsGrid = styled(ProjectsGrid)``;
+
+export const AllProjectsGrid = styled(ProjectsGrid)`
+  margin-top: 0;
+`;
+
+export const NoProjects = styled.h2`
+  font-size: 3rem;
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
 `;
