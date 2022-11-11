@@ -54,8 +54,10 @@ const ProjectsTitle = styled.h2`
 export const FeaturedProjectsTitle = styled(ProjectsTitle)``;
 
 export const AllProjectsTitle = styled(ProjectsTitle)`
-
   color: var(--grey);
+  @media (max-width: 600px) {
+    margin-bottom: 20px;
+  }
   @media (max-width: 500px) {
     margin-bottom: 10px;
   }
@@ -175,6 +177,10 @@ export const FeaturedProjectsGrid = styled(ProjectsGrid)``;
 
 export const AllProjectsGrid = styled(ProjectsGrid)`
   margin-top: 0;
+  padding: 50px 0 0 0;
+  @media (max-width: 500px) {
+    padding: 0;
+  }
 `;
 
 export const NoProjects = styled.h2`

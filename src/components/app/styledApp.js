@@ -64,7 +64,6 @@ export const DraculaButtonContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   z-index: 3;
-  border: 1px solid red;
   @media (hover: hover) {
     &:hover {
       right: -5px;
