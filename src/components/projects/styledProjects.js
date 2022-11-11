@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const ProjectsSection = styled.section`
-  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
 
   @media (max-width: 400px) {
     padding-top: 0;
@@ -27,7 +29,7 @@ const ProjectsTextGroup = styled.div`
 export const FeaturedProjectsTextGroup = styled(ProjectsTextGroup)``;
 
 export const AllProjectsTextGroup = styled(ProjectsTextGroup)`
-  margin: 0;
+  margin: 50px 0 0 0;
   padding: 50px 0 0 0;
   background-color: ${(props) =>
     props.draculaMode ? 'var(--draculaGrey)' : 'white'}; ;

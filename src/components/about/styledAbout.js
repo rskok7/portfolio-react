@@ -8,7 +8,7 @@ export const AboutSection = styled.section`
   max-width: 1152px;
 
   @media (max-width: 768px) {
-    margin-top: 100px;
+    margin: 100px auto 0 auto;
   }
 `;
 
