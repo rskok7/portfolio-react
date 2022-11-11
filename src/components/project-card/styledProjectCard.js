@@ -15,12 +15,12 @@ export const ProjectCardContainer = styled.div`
   }
 
   @media (max-width: 510px) {
-    height: 90%;
+    /* height: 90%; */
     display: flex;
     flex-direction: column;
     background-color: ${(props) =>
       props.draculaMode ? 'rgba(176, 180, 188, 0.7)' : 'rgba(233, 240, 243, 0.7)'};
-    padding: 20px 0;
+    padding: 0 0 10px 0;
     border-radius: 25px;
 
     &:hover {
@@ -42,12 +42,13 @@ export const ProjectImage = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 25px;
-  box-shadow: ${(props) =>
+  box-shadow: none;
+  /* box-shadow: ${(props) =>
     props.draculaMode
       ? '0px 10px 0px rgba(124, 130, 142, 0.7)'
-      : '0px 10px 1px rgba(233, 240, 243, 0.7)'};
+      : '0px 10px 1px rgba(233, 240, 243, 0.7)'}; */
   @media (max-width: 510px) {
-    width: 95%;
+    width: 100%;
     margin: auto;
   }
 `;
@@ -102,7 +103,7 @@ export const ProjectText = styled.p`
 
   @media (max-width: 670px) {
     font-size: 13px;
-    margin-top: 15px;
+    margin-top: 5px;
     line-height: 1.8;
   }
 
@@ -114,7 +115,6 @@ export const ProjectText = styled.p`
     position: static;
     width: 95%;
     margin-bottom: 5px;
-    margin-top: 20px;
   }
 
   @media (max-width: 420px) {
