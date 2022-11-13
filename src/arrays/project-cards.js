@@ -8,7 +8,7 @@ import ApiaryHomepageImage from '../images/apiary-images/apiary-homepage.png';
 import NewsExplorerHomepageImage from '../images/news-explorer-images/news-explorer-homepage.png';
 import DotcotHomepageImage from '../images/dotcot-images/dotcot-homepage.png';
 import ConfectioneryImage from '../images/confectionery-images/confectionery-homepage.png';
-import HistoryMuffinImage from '../images/history-muffin-images/history-muffin-homepage.png';
+import HistoryMuffinImage from '../images/history-muffin-images/history-muffin-homepage-2.png';
 
 const projectCards = [
   {

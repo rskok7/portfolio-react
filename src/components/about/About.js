@@ -80,15 +80,15 @@ function About() {
               that help your life run better.
             </AboutParagraph>
             <AboutParagraph>
-              When I'm not coding, I'm working on my{' '}
-              <AboutAnimationLink
+              {/* <AboutAnimationLink
                 href="https://www.youtube.com/channel/UCmvmSKDd3Wo7CQt8carRVuA"
                 target="_blank"
                 rel="noreferrer"
                 draculaMode={draculaMode}>
                 animated history channel
-              </AboutAnimationLink>
-              , and wakeboarding. Check me out at the places below:
+              </AboutAnimationLink> */}
+              When I'm not coding, I'm doing standup comedy. Check me out at the
+              places below:
             </AboutParagraph>
             <AboutIcons>
               <IconLink

@@ -1,5 +1,5 @@
 import ConfectioneryImage from '../images/confectionery-images/confectionery-homepage.png';
-import HistoryMuffinImage from '../images/history-muffin-images/history-muffin-homepage.png';
+import HistoryMuffinImage from '../images/history-muffin-images/history-muffin-homepage-2.png';
 
 const featuredProjectCards = [
   {
