@@ -9,8 +9,29 @@ import NewsExplorerHomepageImage from '../images/news-explorer-images/news-explo
 import DotcotHomepageImage from '../images/dotcot-images/dotcot-homepage.png';
 import ConfectioneryImage from '../images/confectionery-images/confectionery-homepage.png';
 import HistoryMuffinImage from '../images/history-muffin-images/history-muffin-homepage-2.png';
+import GoFundYourselfImage from '../images/gofundyourself-images/gofundyourself-homepage.png';
 
 const projectCards = [
+  {
+    id: 12,
+    image: GoFundYourselfImage,
+    alt: 'GoFundYourself fundraising site',
+    description:
+      'A fundraising site where users can create and manage fundraisers, or donate to fundraisers using credit card handling',
+    pageLink: 'https://gofundyourself.lol',
+    githubLink: 'https://github.com/cjmaret/gofundyourself-frontend',
+    languages: [
+      'react',
+      'mongodb',
+      'graphql',
+      'keystone',
+      'typescript',
+      'next',
+      'jest',
+      'css',
+      'html5',
+    ],
+  },
   {
     id: 11,
     image: HistoryMuffinImage,

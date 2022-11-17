@@ -1,18 +1,18 @@
 import ConfectioneryImage from '../images/confectionery-images/confectionery-homepage.png';
-import HistoryMuffinImage from '../images/history-muffin-images/history-muffin-homepage-2.png';
+import GoFundYourselfImage from '../images/gofundyourself-images/gofundyourself-homepage.png';
 
 const featuredProjectCards = [
   {
-    id: 11,
-    image: HistoryMuffinImage,
-    alt: 'History Muffin E-commerce store',
+    id: 12,
+    image: GoFundYourselfImage,
+    alt: 'GoFundYourself fundraising site',
     description:
-      'An e-commerce store where users can purchase or sell products, create an account, manage their products, and make purchases using Stripe',
-    pageLink: 'https://historymuffin.com',
-    githubLink: 'https://github.com/cjmaret/history-muffin-frontend',
+      'A fundraising site where users can create and manage fundraisers, or donate to fundraisers using credit card handling',
+    pageLink: 'https://gofundyourself.lol',
+    githubLink: 'https://github.com/cjmaret/gofundyourself-frontend',
   },
   {
-    id: 10,
+    id: 2,
     image: ConfectioneryImage,
     alt: 'The Confectionery Homepage',
     description:
