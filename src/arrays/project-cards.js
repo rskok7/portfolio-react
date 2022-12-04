@@ -7,13 +7,14 @@ import PlanetsReactImage from '../images/planets-react-images/planets-react-main
 import ApiaryHomepageImage from '../images/apiary-images/apiary-homepage.png';
 import NewsExplorerHomepageImage from '../images/news-explorer-images/news-explorer-homepage.png';
 import DotcotHomepageImage from '../images/dotcot-images/dotcot-homepage.png';
+import ABTHomepageImage from '../images/abt-images/abt-homepage.png';
 import ConfectioneryImage from '../images/confectionery-images/confectionery-homepage.png';
 import HistoryMuffinImage from '../images/history-muffin-images/history-muffin-homepage-2.png';
 import GoFundYourselfImage from '../images/gofundyourself-images/gofundyourself-homepage.png';
 
 const projectCards = [
   {
-    id: 12,
+    id: 13,
     image: GoFundYourselfImage,
     alt: 'GoFundYourself fundraising site',
     description:
@@ -33,7 +34,7 @@ const projectCards = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     image: HistoryMuffinImage,
     alt: 'History Muffin E-commerce store',
     description:
@@ -53,7 +54,7 @@ const projectCards = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     image: ConfectioneryImage,
     alt: 'The Confectionery Homepage',
     description:
@@ -61,6 +62,16 @@ const projectCards = [
     pageLink: 'https://goofy-jang-9e020a.netlify.app',
     githubLink: 'https://github.com/cjmaret/confectionery',
     languages: ['react', 'gatsby', 'contentful'],
+  },
+  {
+    id: 10,
+    image: ABTHomepageImage,
+    alt: 'ABT Homepage',
+    description:
+      'Frontend for a NYS fire protection company, with equipment/suppression info, and contact form via EmailJS',
+    pageLink: 'https://abtfireprotection.com',
+    githubLink: 'https://github.com/cjmaret/abt',
+    languages: ['react', 'next', 'css', 'html5'],
   },
   {
     id: 9,
