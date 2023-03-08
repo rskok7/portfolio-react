@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+<<<<<<< HEAD
 import { BrowserRouter } from 'react-router-dom';
 import './vendor/normalize.css';
 import App from './components/app/App.js';
@@ -38,6 +39,15 @@ ReactDOM.render(
       <GlobalStyles />
       <App />
     </BrowserRouter>
+=======
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+>>>>>>> ab10167 (feat: react)
   </React.StrictMode>,
   document.getElementById('root')
 );
